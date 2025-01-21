@@ -4,23 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-
-  const [scrolled, setScrolled] = useState(false);
-
-  // Detect scroll to toggle background
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   if (!currentTheme) return null;
 
@@ -31,13 +18,9 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all ${
-        scrolled
-          ? "bg-white dark:bg-gray-900 shadow-md"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70  transition-all"
     >
-      <div className="w-full flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
+      <div className="flex items-center justify-between max-w-6xl mx-auto px-10 py-4">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -50,20 +33,35 @@ export default function NavBar() {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex gap-8">
-          <Link href="/furniture" className="nav-link">
+        <div className="hidden md:flex gap-7">
+          <Link
+            href="/furniture"
+            className="nav-link"
+          >
             Furniture
           </Link>
-          <Link href="/benefits" className="nav-link">
+          <Link
+            href="/benefits"
+            className="nav-link"
+          >
             Benefits
           </Link>
-          <Link href="/howItWorks" className="nav-link">
+          <Link
+            href="/howItWorks"
+            className="nav-link"
+          >
             How it Works
           </Link>
-          <Link href="/prices" className="nav-link">
+          <Link
+            href="/prices"
+            className="nav-link"
+          >
             Prices
           </Link>
-          <Link href="/faq" className="nav-link">
+          <Link
+            href="/faq"
+            className="nav-link"
+          >
             FAQ
           </Link>
         </div>
