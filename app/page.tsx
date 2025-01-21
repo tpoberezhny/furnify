@@ -1,9 +1,11 @@
-export default function Home() {
+import Explore from "./components/Explore";
+import Home from "./components/Home";
+
+export default function Furnify() {
   return (
-  <>
-  <div className="mt-24">
-    <h1>Hello</h1>
-  </div>
-  </>
-);
-}
+    <>
+    <Home />
+    <Explore />
+    </>
+  )
+} 
