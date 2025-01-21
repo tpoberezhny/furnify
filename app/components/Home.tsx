@@ -1,14 +1,38 @@
+"use client"
+
 import Image from "next/image";
+import Typewriter from 'typewriter-effect';
+interface TypeWriter {
+  strings: string[],
+  autoStart: boolean,
+  loop: boolean,
+  deleteSpeed: number,
+  delay: number,
+  cursor: string
+}
 
 export default function Home() {
+
+  
+  const TypeWriterOptions:TypeWriter = {
+    strings: ["office, hotel and home"],
+    autoStart: true,
+    loop: false,
+    deleteSpeed: Infinity,
+    delay: 50,
+    cursor: "_"
+  }
+
   return (
     <div className="relative mt-20 text-center">
       <div className="relative">
         <h1 className="title">
           Furnish your 
           <br />
-           office, hotel and home
-          <br />
+          <span className="text-primary">
+            <Typewriter options={TypeWriterOptions} />
+          </span>
+       
           with subscription furniture
         </h1>
         <h3 className="mt-10 description-text dark:invert">
@@ -21,7 +45,7 @@ export default function Home() {
       <div className="relative mt-10">
         <Image
           src="/assets/homeSelection.png"
-          width={1056}
+          width={1312}
           height={724}
           alt="home"
           className="rounded-xl mx-auto"
@@ -31,10 +55,10 @@ export default function Home() {
       {/* Brands Logos */}
       <div className="mt-6">
         <Image src="/assets/brandsLogoTransparent.png"
-        width={1056}
-        height={724}
+        width={1312}
+        height={100}
         alt="brands"
-        className="rounded-lg dark:invert opacity-40"/>
+        className="rounded-lg dark:invert opacity-40 mx-auto"/>
       </div>
     </div>
   );

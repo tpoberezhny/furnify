@@ -81,15 +81,10 @@ body {
   }
 
   .title {
-    @apply text-6xl font-bold leading-tight tracking-tighter;
+    @apply text-6xl font-bold leading-tight tracking-tight;
   }
 
   .description-text {
-    @apply text-description text-lg font-normal;
-  }
-
-  .description-bg {
-    @apply bg-cover bg-center text-white dark:text-gray-100 rounded-lg shadow-lg p-6;
-    background-image: url('/assets/image3.png');
+    @apply text-description text-lg font-normal leading-loose;
   }
 }
