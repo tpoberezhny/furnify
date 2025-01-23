@@ -81,10 +81,14 @@ body {
   }
 
   .title {
-    @apply text-6xl font-bold leading-[1.1] tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight;
   }
 
   .description-text {
-    @apply text-description text-lg font-normal leading-loose;
+    @apply text-description text-base font-normal md:text-lg md:font-normal md:leading-loose;
+  }
+
+  .customTopMargin {
+    @apply mt-7 lg:mt-10;
   }
 }

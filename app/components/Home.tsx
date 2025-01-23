@@ -35,13 +35,13 @@ export default function Home() {
        
           with subscription
         </h1>
-        <h3 className="mt-10 description-text dark:invert">
+        <h3 className="customTopMargin description-text dark:invert">
           Provide your spaces with stylish, ergonomic furniture on a flexible subscription model
           <br /> no upfront costs, easy upgrades, and hassle-free maintenance.
         </h3>
       </div>
 
-      <div className="relative mt-10">
+      <div className="relative customTopMargin">
         <Image
           src="/assets/homeSelection.png"
           width={1312}
