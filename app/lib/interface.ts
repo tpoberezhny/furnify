@@ -1,6 +1,8 @@
+import { ImageUrlBuilderOptions } from "@sanity/image-url/lib/types/types";
+
 export interface carusel {
   title: string;
-  titleImage: any;
+  titleImage: ImageUrlBuilderOptions;
 }
 
 export interface TypeWriter {
