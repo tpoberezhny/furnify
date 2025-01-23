@@ -33,12 +33,11 @@ export default function Home() {
             <Typewriter options={TypeWriterOptions} />
           </span>
        
-          with subscription furniture
+          with subscription
         </h1>
         <h3 className="mt-10 description-text dark:invert">
-          Provide your spaces with stylish, ergonomic furniture
-          <br /> on a flexible subscription model — no upfront costs,
-         easy upgrades, and hassle-free maintenance.
+          Provide your spaces with stylish, ergonomic furniture on a flexible subscription model
+          <br /> no upfront costs, easy upgrades, and hassle-free maintenance.
         </h3>
       </div>
 
