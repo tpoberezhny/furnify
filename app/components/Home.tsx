@@ -2,14 +2,7 @@
 
 import Image from "next/image";
 import Typewriter from 'typewriter-effect';
-interface TypeWriter {
-  strings: string[],
-  autoStart: boolean,
-  loop: boolean,
-  deleteSpeed: number,
-  delay: number,
-  cursor: string
-}
+import { TypeWriter } from "../lib/interface";
 
 export default function Home() {
 
