@@ -35,8 +35,8 @@ export default function NavBar() {
         {/* Navigation Links */}
         <div className="hidden md:flex gap-7">
           <Link
-            href="/furniture"
-            className="nav-link"
+            href="/#furniture"
+            className="nav-link" scroll={true}
           >
             Furniture
           </Link>
