@@ -72,6 +72,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    --swiper-wrapper-transition-timing-function: linear !important;
+    scroll-behavior: smooth;
   }
 }
 

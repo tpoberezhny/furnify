@@ -13,3 +13,11 @@ export interface TypeWriter {
   delay: number;
   cursor: string;
 }
+
+export interface itemProps {
+  title: string;
+  titleImage: ImageUrlBuilderOptions;
+  rentPrice: number;
+  mainType: string;
+  additionalType: string;
+}
