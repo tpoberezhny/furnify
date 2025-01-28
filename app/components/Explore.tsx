@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import { client } from "../lib/sanity";
 import { carusel } from "../lib/interface";
 import SwiperComponent from "./SwiperComponent";
+import Link from "next/link";
 
-async function getData() {
+async function getCaruselData() {
   const query = `*[_type == "furnify"] | order(_createdAt desc) {
     title,
     titleImage
@@ -15,10 +16,10 @@ async function getData() {
 }
 
 export default async function Explore() {
-  const data: carusel[] = await getData();
+  const data: carusel[] = await getCaruselData();
 
   return (
-    <div className="relative mt-10 lg:mt-20 text-center">
+    <div className="relative mt-10 lg:mt-20 text-center" id="furniture">
       <h1 className="title">
         Everything you need
         <br />
@@ -29,9 +30,11 @@ export default async function Explore() {
         <br /> and homes, designed to combine style, functionality, and comfort
         for any space
       </h3>
-      <Button className="customTopMargin p-6 rounded-2xl font-medium text-md">
-        Prices
-      </Button>
+      <Link href="/prices">
+        <Button className="customTopMargin p-6 rounded-2xl font-medium text-md" title="Prices">
+          Prices
+        </Button>
+      </Link>
       <SwiperComponent data={data} />
     </div>
   );
