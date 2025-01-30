@@ -2,7 +2,7 @@ import { client } from "../lib/sanity";
 import PricesClient from "../components/PricesClient";
 
 async function getData() {
-  const query = `*[_type == "furnify"] | order(_createdAt desc) {
+  const query = `*[_type == "furnify"] | order(rentPrice asc) {
     title,
     brand,
     titleImage,

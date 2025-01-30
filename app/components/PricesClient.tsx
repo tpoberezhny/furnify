@@ -129,8 +129,8 @@ export default function PricesClient({ data }: PricesClientProps) {
       </div>
       {/* Scroll to Top Button */}
       {showScrollButton && (
-        <Button onClick={scrollToTop} className="fixed bottom-5 right-5 p-3 rounded-full shadow-lg transition-all duration-300">
-          <ArrowUp size={24} />
+        <Button onClick={scrollToTop} className="fixed bottom-8 right-5 py-5 px-4 rounded-full shadow-lg transition-all duration-300">
+          <ArrowUp size={35} />
         </Button>
       )}
     </div>
