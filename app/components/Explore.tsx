@@ -23,7 +23,7 @@ export default async function Explore() {
       <h1 className="title">
         Everything you need
         <br />
-        for work and life
+        for <span className="text-primary">work</span> and <span className="text-primary">life</span>
       </h1>
       <h3 className="description-text customTopMargin dark:invert">
         Explore a wide selection of furniture for offices, hotels,

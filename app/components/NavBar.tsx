@@ -41,7 +41,7 @@ export default function NavBar() {
             Furniture
           </Link>
           <Link
-            href="/benefits"
+            href="/#benefits"
             className="nav-link"
           >
             Benefits
