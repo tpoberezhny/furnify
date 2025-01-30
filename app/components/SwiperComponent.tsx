@@ -16,7 +16,7 @@ export default function SwiperComponent({ data }: SwiperComponentProps) {
   return (
     <Swiper
       modules={[Autoplay]}
-      spaceBetween={60} 
+      spaceBetween={40} 
       slidesPerView='auto'
       autoplay={{
         delay: 1,
@@ -25,17 +25,17 @@ export default function SwiperComponent({ data }: SwiperComponentProps) {
       speed={8000}
       loop={true}
       freeMode={true}
-      allowTouchMove={false}
+      allowTouchMove={true}
       className="mt-20"
     >
       {data.map((item, index) => (
         <SwiperSlide
           key={index}
           style={{
-            width: "300px",
-            height: "300px",
+            width: "var(--swiper-slide-width)",
+            height: "var(--swiper-slide-height)",
           }}
-          className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md transition-opacity duration-500"
+          className=" md:w-[200px] md:h-[200px] flex justify-center items-center bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md transition-opacity duration-500"
         >
           <div className="w-full h-full flex justify-center items-center bg-gray-100 dark:bg-gray-400 rounded-xl">
             <Image
