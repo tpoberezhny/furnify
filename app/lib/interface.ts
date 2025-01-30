@@ -16,6 +16,7 @@ export interface TypeWriter {
 
 export interface itemProps {
   title: string;
+  brand: string;
   titleImage: ImageUrlBuilderOptions;
   rentPrice: number;
   mainType: string;

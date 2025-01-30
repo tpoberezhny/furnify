@@ -4,6 +4,7 @@ import PricesClient from "../components/PricesClient";
 async function getData() {
   const query = `*[_type == "furnify"] | order(_createdAt desc) {
     title,
+    brand,
     titleImage,
     rentPrice,
     mainType,
