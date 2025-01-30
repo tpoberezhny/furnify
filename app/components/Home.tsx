@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative mt-20 text-center">
+    <div className="relative mt-20 text-center px-4 mx-auto max-w-6xl">
       <div className="relative">
         <h1 className="title">
           Furnish your 

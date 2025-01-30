@@ -20,7 +20,7 @@ export default function NavBar() {
     <nav
       className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70  transition-all"
     >
-      <div className="flex items-center justify-between max-w-6xl mx-auto px-10 py-4">
+      <div className="flex items-center justify-between max-w-6xl mx-auto px-4 py-4">
         {/* Logo */}
         <Link href="/">
           <Image
