@@ -1,13 +1,13 @@
 import Explore from "./components/Explore";
 import Home from "./components/Home";
-import Benefits from "./components/Benefits";
+import LazyBenefits from "./components/LazyBenefitsWrapper";
 
 export default function Furnify() {
   return (
     <>
     <Home />
     <Explore />
-    <Benefits />
+    <LazyBenefits />
     </>
   )
 } 
