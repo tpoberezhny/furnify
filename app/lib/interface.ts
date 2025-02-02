@@ -22,3 +22,12 @@ export interface itemProps {
   mainType: string;
   additionalType: string;
 }
+
+export interface BenefitCardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  textPosition?: "top-left" | "bottom-left" | "center";
+  blurTextBg?: boolean;
+}
+
