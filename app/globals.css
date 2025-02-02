@@ -8,7 +8,6 @@ body {
   font-size: 20px;
 }
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -106,8 +105,19 @@ body {
   .swiper-slide {
     transition: opacity 0.5s ease;
   }
-  
+
   .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.5; 
+    opacity: 0.5;
+  }
+
+  .contactInput {
+    @apply h-12 md:h-14 block w-full rounded-md bg-[#F4F4F5] px-3 py-1 text-sm md:text-base placeholder-transparent focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary;
+  }
+
+  .contactLabel {
+    @apply absolute left-3 transition-all duration-200 ease-in-out
+    text-gray-500 text-xs top-0 
+    peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
+    peer-focus:top-[-3px] peer-focus:text-xs;
   }
 }
