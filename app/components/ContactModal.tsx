@@ -51,7 +51,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
           <X className="w-5 h-5" />
         </button>
         <h2 className="text-2xl font-semibold mb-1">Get in Touch</h2>
-        <h1 className="text-lg mb-4">Let's chat, reach out to Us</h1>
+        <h1 className="text-lg mb-4">Let&apos;s chat, reach out to Us</h1>
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Input for Name */}
           <div className="relative">
