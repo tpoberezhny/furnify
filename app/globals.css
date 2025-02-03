@@ -111,13 +111,13 @@ body {
   }
 
   .contactInput {
-    @apply h-12 md:h-14 block w-full rounded-md bg-[#F4F4F5] px-3 py-1 text-sm md:text-base placeholder-transparent focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary;
+    @apply h-12 md:h-14 block w-full rounded-md bg-[#F4F4F5] px-3 py-6 text-base placeholder-transparent focus:outline-none focus:ring-primary focus:border-primary dark:text-black;
   }
 
   .contactLabel {
     @apply absolute left-3 transition-all duration-200 ease-in-out
-    text-gray-500 text-xs top-0 
-    peer-placeholder-shown:top-2 peer-placeholder-shown:text-base
-    peer-focus:top-[-3px] peer-focus:text-xs;
+    text-gray-500 text-xs top-0
+    peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
+    peer-focus:top-[1px] peer-focus:text-xs;
   }
 }
