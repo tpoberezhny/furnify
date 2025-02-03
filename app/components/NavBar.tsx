@@ -30,7 +30,7 @@ export default function NavBar() {
             alt="Logo"
             width={120}
             height={60}
-            className="z-10"
+            className="z-10 mr-6"
           />
         </Link>
 
