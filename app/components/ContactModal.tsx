@@ -18,6 +18,10 @@ export default function ContactModal({ onClose }: ContactModalProps) {
     phone: "",
     message: "",
   });
+  const [notification, setNotification] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -34,9 +38,43 @@ export default function ContactModal({ onClose }: ContactModalProps) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form data submitted", formData);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setNotification({
+          message: "Your message has been sent successfully!",
+          type: "success",
+        });
 
-    onClose();
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        setTimeout(() => {
+          onClose();
+        }, 3000);
+      } else {
+        setNotification({
+          message: "Error submitting the form. Please try again.",
+          type: "error",
+        });
+      }
+    } catch (error) {
+      console.error("Error submiting the form", error);
+      setNotification({
+        message: "Error submitting the form. Please try again.",
+        type: "error",
+      });
+    }
   };
 
   return createPortal(
@@ -52,6 +90,17 @@ export default function ContactModal({ onClose }: ContactModalProps) {
         </button>
         <h2 className="text-2xl font-semibold mb-1">Get in Touch</h2>
         <h1 className="text-lg mb-4">Let&apos;s chat, reach out to Us</h1>
+        {notification && (
+          <div
+            className={`p-2 mb-4 border rounded ${
+              notification.type === "success"
+                ? "text-green-600 bg-green-100 border-green-400"
+                : "text-red-600 bg-red-100 border-red-400"
+            }`}
+          >
+            {notification.message}
+          </div>
+        )}
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Input for Name */}
           <div className="relative">
