@@ -42,13 +42,13 @@ export default function NavBar() {
           <Link href="/#benefits" className="nav-link">
             Benefits
           </Link>
-          <Link href="/howItWorks" className="nav-link">
+          <Link href="/#howItWorks" className="nav-link">
             How it Works
           </Link>
           <Link href="/prices" className="nav-link">
             Prices
           </Link>
-          <Link href="/faq" className="nav-link">
+          <Link href="/#faq" className="nav-link">
             FAQ
           </Link>
         </div>
