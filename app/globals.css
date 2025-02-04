@@ -78,6 +78,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     --swiper-wrapper-transition-timing-function: linear !important;
@@ -90,12 +91,18 @@ body {
     @apply text-base font-normal text-foreground hover:text-primary transition-colors duration-300;
   }
 
+  .prices {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
   .title {
-    @apply text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-[52px] font-bold leading-[1.8rem] lg:leading-[3.1rem] tracking-tight;
   }
 
   .description-text {
-    @apply text-description text-base font-normal md:text-lg md:font-normal md:leading-loose;
+    @apply text-description text-base font-normal md:text-lg md:font-normal md:leading-normal;
   }
 
   .customTopMargin {

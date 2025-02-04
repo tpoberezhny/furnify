@@ -21,7 +21,7 @@ export default function NavBar() {
       : "/assets/whiteThemeLogo.svg";
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70  transition-all">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-sm bg-white/70 dark:bg-gray-900/70  transition-all">
       <div className="flex items-center justify-between max-w-6xl mx-auto px-4 py-4">
         {/* Logo */}
         <Link href="/">

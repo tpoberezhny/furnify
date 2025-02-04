@@ -118,11 +118,11 @@ export default function PricesClient({ data }: PricesClientProps) {
               />
             </div>
             <div className="mt-4 text-center">
-              <h4 className="text-md leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center">
+              <h4 className="text-md leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center prices">
                 {item.title}
               </h4>
-              <h4 className="font-sm text-sm underline mt-1">{item.brand}</h4>
-              <p className="text-gray-500 mt-2">{item.rentPrice} Kč / month</p>
+              <h4 className="font-sm text-sm underline mt-1 prices">{item.brand}</h4>
+              <p className="text-gray-500 mt-2 prices">{item.rentPrice} Kč / month</p>
             </div>
           </div>
         ))}
