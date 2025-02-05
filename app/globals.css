@@ -102,7 +102,7 @@ body {
   }
 
   .description-text {
-    @apply text-description text-base font-normal md:text-lg md:font-normal md:leading-normal;
+    @apply text-description text-sm font-normal md:text-lg md:leading-normal;
   }
 
   .customTopMargin {
