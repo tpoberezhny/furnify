@@ -35,8 +35,7 @@ export default function Faq() {
     {
       question:
         "Is it possible to cancel the subscription, and what are the terms?",
-      answer:
-        `The only condition on our part is a minimum subscription of 12 months. You can cancel your subscription at any time before the term ends by paying the remaining rental balance. For example, if you've been with us for 10 months, to terminate, you would need to pay for the remaining 2 months.`,
+      answer: `The only condition on our part is a minimum subscription of 12 months. You can cancel your subscription at any time before the term ends by paying the remaining rental balance. For example, if you've been with us for 10 months, to terminate, you would need to pay for the remaining 2 months.`,
     },
   ];
 
@@ -49,7 +48,11 @@ export default function Faq() {
         </h1>
       </div>
       {faqData.map((children, index) => (
-        <FAQItem key={index} question={children.question} answer={children.answer} />
+        <FAQItem
+          key={index}
+          question={children.question}
+          answer={children.answer}
+        />
       ))}
     </div>
   );

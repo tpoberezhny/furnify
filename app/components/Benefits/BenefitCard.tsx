@@ -1,4 +1,4 @@
-import { BenefitCardProps } from "../lib/interface";
+import { BenefitCardProps } from "../../lib/interface";
 
 const BenefitCard: React.FC<BenefitCardProps> = ({
   title,

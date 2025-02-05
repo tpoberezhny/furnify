@@ -61,7 +61,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
         });
         setTimeout(() => {
           onClose();
-        }, 3000);
+        }, 2000);
       } else {
         setNotification({
           message: "Error submitting the form. Please try again.",
