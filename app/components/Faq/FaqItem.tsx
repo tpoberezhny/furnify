@@ -18,10 +18,10 @@ const FAQItem = ({ question, answer }: FAQItemProps) => (
     {({ open }) => (
       <>
         <DisclosureButton className="flex text-left description-text font-semibold w-full justify-between mt-2 md:mt-5 px-4 py-4 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800">
-          <span>{question}</span>
+          <span className="max-w-[90%]">{question}</span>
           <ChevronDown
             className={clsx(
-              " text-gray-500 transition-transform duration-200 dark:text-white",
+              " text-gray-500 transition-transform duration-200 dark:text-white w-[25px] h-[25px]",
               open && "rotate-180"
             )}
           />
