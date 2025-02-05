@@ -1,6 +1,6 @@
 import React from "react";
 import BenefitCard from "./BenefitCard";
-import { BenefitCardProps } from "../lib/interface";
+import { BenefitCardProps } from "../../lib/interface";
 
 export default function Benefits() {
   const benefitData: BenefitCardProps[] = [
