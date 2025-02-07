@@ -16,7 +16,7 @@ export default function SwiperComponent({ data }: SwiperComponentProps) {
   return (
     <Swiper
       modules={[Autoplay]}
-      spaceBetween={40} 
+      spaceBetween={30} 
       slidesPerView='auto'
       autoplay={{
         delay: 1,

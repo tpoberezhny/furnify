@@ -5,24 +5,26 @@ import { BenefitCardProps } from "../../lib/interface";
 export default function Benefits() {
   const benefitData: BenefitCardProps[] = [
     {
-      title: "Flexible Customization",
+      title: "Saving Money",
       description:
-        "Give you the opportunity to upgrade or add extra furniture at any time",
-      imageUrl: "assets/customization.png",
+        "Low initial costs for cash flow-oriented individuals and businesses.",
+      imageUrl: "assets/moneySavingBenefit.png",
       textPosition: "top-left",
       blurTextBg: true,
     },
     {
-      title: "Service",
-      description: "Fix the items for the entire duration of the subscription",
-      imageUrl: "assets/service.jpg",
+      title: "More Cost-Effective Than Coworking",
+      description:
+        "If you have a team of 5 or more people, an office space furnished with our furniture will cost you up to 40% less than a coworking space.",
+      imageUrl: "assets/costEffective.png",
       textPosition: "bottom-left",
       blurTextBg: true,
     },
     {
-      title: "Free Delivery & Assembly",
-      description: "Free Delivery and Assembly of all items",
-      imageUrl: "assets/moving.jpg",
+      title: "Free Delivery and Assembly",
+      description:
+        "Our team will come to your location, carry the furniture upstairs, and assemble it completely free of charge.",
+      imageUrl: "assets/delivery.png",
       textPosition: "top-left",
       blurTextBg: true,
     },
