@@ -40,12 +40,9 @@ export default function Benefits() {
         </h1>
         <h3 className="description-text customTopMargin dark:invert">
           Our product is not only about a different way of using furniture but
-          also about a range of advantages
+          also about a range of <span className="text-primary">advantages</span>
           <br />
-          that allow you to <span className="text-primary">
-            stop worrying
-          </span>{" "}
-          about furniture altogether
+          that allow you to stop worrying about furniture altogether
         </h3>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 justify-items-center ">
