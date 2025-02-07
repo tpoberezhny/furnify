@@ -53,14 +53,14 @@ export default function HowItWorks() {
             className="object-contain mx-auto [mask-image:linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
           />
         </div>
-        {/*Delivery */}
+        {/*Subscription*/}
         <div className="bg-gray-50 p-2 rounded-2xl">
           <Image
-            src="/assets/contactUs.png"
+            src="/assets/16.png"
             alt="Contact Us"
             width={350}
             height={250}
-            className="object-contain mx-auto [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
+            className="object-contain mx-auto [mask-image:linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
           />
           <div className="mb-5 p-2">
             <h2 className="text-left mt-8 font-semibold text-lg dark:invert">
@@ -71,9 +71,6 @@ export default function HowItWorks() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="w-full mt-10">
-        <h1>Image of delivery & assembly will be here</h1>
       </div>
     </div>
   );

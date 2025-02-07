@@ -100,14 +100,15 @@ body {
   .mainImageTitle {
     font-family: var(--font-montserrat), sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
+    min-width: 150px;
   }
 
   .mainImagePrices {
     font-family: var(--font-montserrat), sans-serif;
     font-weight: 500;
-    font-size: 16;
-    line-height: 22px;
+    font-size: 14;
+    line-height: 20px;
   }
 
   .title {

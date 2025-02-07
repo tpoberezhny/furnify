@@ -22,6 +22,7 @@ export default function Home() {
       id: 1,
       top: "47.3%",
       left: "14%",
+      type: "Armchair",
       title: "Ekenaset - IKEA",
       priceRent: "415 Kč/month",
     },
@@ -29,6 +30,7 @@ export default function Home() {
       id: 2,
       top: "27%",
       left: "43%",
+      type: "Chair",
       title: "AlzaErgo Chair Wave 1",
       priceRent: "415 Kč/month",
     },
@@ -36,6 +38,7 @@ export default function Home() {
       id: 3,
       top: "30.3%",
       left: "57%",
+      type: "Desk",
       title: "AlzaErgo ET5 AiO Essential",
       priceRent: "415 Kč/month",
     },
@@ -43,6 +46,7 @@ export default function Home() {
       id: 4,
       top: "69%",
       left: "51.5%",
+      type: "Bed",
       title: "Brimnes - IKEA",
       priceRent: "725 Kč/month",
     },
@@ -50,6 +54,7 @@ export default function Home() {
       id: 5,
       top: "73%",
       left: "93%",
+      type: "Storage Cabinet",
       title: "Walpole - Beliani",
       priceRent: "258 Kč/month",
     },
@@ -103,11 +108,12 @@ export default function Home() {
 
               {/* Tooltip/modal that appears under the circle */}
               {activeHover === circle.id && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-50 rounded shadow-sm z-51">
-                  <p className="mainImageTitle text-center p-1 mb-2">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-50 rounded z-[51]">
+                  <p className="mainImageType text-center dark:invert">{circle.type}</p>
+                  <p className="mainImageTitle text-center p-1 mb-1 w-full dark:invert">
                     {circle.title}
                   </p>
-                  <p className="mainImagePrices text-center">
+                  <p className="mainImagePrices text-center dark:invert">
                     {circle.priceRent}
                   </p>
                 </div>
