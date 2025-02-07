@@ -31,7 +31,7 @@ export default function Benefits() {
   ];
 
   return (
-    <div id="benefits" className="mt-10 lg:mt-20 text-center max-w-6xl mx-auto">
+    <div id="benefits" className="mt-10 lg:mt-20 text-center max-w-6xl mx-auto scroll-mt-20">
       <div>
         <h1 className="title">
           The <span className="text-primary">smart</span> choice for

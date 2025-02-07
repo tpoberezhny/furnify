@@ -40,7 +40,7 @@ export default function Faq() {
   ];
 
   return (
-    <div id="faq" className="relative mt-20 px-4 mx-auto max-w-6xl">
+    <div id="faq" className="relative mt-20 px-4 mx-auto max-w-6xl scroll-mt-20">
       <div className="text-center mb-10">
         <h1 className="title">
           FA

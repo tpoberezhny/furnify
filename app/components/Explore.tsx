@@ -19,7 +19,7 @@ export default async function Explore() {
   const data: carusel[] = await getCaruselData();
 
   return (
-    <div className="relative mt-10 lg:mt-20 text-center" id="furniture">
+    <div className="relative mt-10 lg:mt-20 text-center scroll-mt-20" id="furniture">
       <h1 className="title">
         Everything you need
         <br />
