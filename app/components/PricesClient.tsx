@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { itemProps } from "../lib/interface";
@@ -16,12 +16,62 @@ export default function PricesClient({ data }: PricesClientProps) {
   const [additionalTypeFilter, setAdditionalTypeFilter] = useState<string>("");
   const [showScrollButton, setShowScrollButton] = useState(false);
 
+  const officeAdditionalTypes = [
+    { value: "chair", label: "Chair" },
+    { value: "desk", label: "Desk" },
+    { value: "storageCabinet", label: "Storage Cabinet" },
+    { value: "entrywayCloset", label: "Entryway Closet" },
+    { value: "sofa", label: "Sofa" },
+    { value: "armchair", label: "Armchair" },
+  ];
+
+  const hotelHomeAdditionalTypes = [
+    { value: "bed", label: "Bed" },
+    { value: "entrywayCloset", label: "Entryway Closet" },
+    { value: "wardrobe", label: "Wardrobe" },
+    { value: "sofa", label: "Sofa" },
+    { value: "armchair", label: "Armchair" },
+    { value: "dresser", label: "Dresser" },
+    { value: "bedsideTable", label: "Bedside Table" },
+    { value: "kitchenTable", label: "Kitchen Table" },
+    { value: "diningChair", label: "Dining Chair" },
+  ];
+
+  const allAdditionalTypes = [
+    { value: "chair", label: "Chair" },
+    { value: "desk", label: "Desk" },
+    { value: "storageCabinet", label: "Storage Cabinet" },
+    { value: "bed", label: "Bed" },
+    { value: "wardrobe", label: "Wardrobe" },
+    { value: "entrywayCloset", label: "Entryway Closet" },
+    { value: "sofa", label: "Sofa" },
+    { value: "armchair", label: "Armchair" },
+    { value: "dresser", label: "Dresser" },
+    { value: "bedsideTable", label: "Bedside Table" },
+    { value: "kitchenTable", label: "Kitchen Table" },
+    { value: "diningChair", label: "Dining Chair" },
+  ];
+
+  const allowedAdditionalTypes =
+    mainTypeFilter === "office"
+      ? officeAdditionalTypes
+      : mainTypeFilter === "hotelHome"
+      ? hotelHomeAdditionalTypes
+      : allAdditionalTypes;
+
+  useEffect(() => {
+    const allowedValues = allowedAdditionalTypes.map((type) => type.value);
+    if (additionalTypeFilter && !allowedValues.includes(additionalTypeFilter)) {
+      setAdditionalTypeFilter("");
+    }
+  }, [mainTypeFilter, additionalTypeFilter, allowedAdditionalTypes]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-         setShowScrollButton(true);
+        setShowScrollButton(true);
       } else {
-         setShowScrollButton(false);
+        setShowScrollButton(false);
       }
     };
 
@@ -52,7 +102,9 @@ export default function PricesClient({ data }: PricesClientProps) {
       <div className="flex flex-col md:flex-row md:justify-between mb-8 space-y-5 md:space-y-0">
         {/* Main Type Filter */}
         <div className="w-full md:w-auto">
-          <h3 className="font-medium text-lg mb-2 md:mb-4">Filter by Main Type</h3>
+          <h3 className="font-medium text-lg mb-2 md:mb-4">
+            Filter by Main Type
+          </h3>
           <div className="space-x-2">
             <Button
               variant={mainTypeFilter === "all" ? "default" : "outline"}
@@ -86,18 +138,11 @@ export default function PricesClient({ data }: PricesClientProps) {
             onChange={(e) => setAdditionalTypeFilter(e.target.value)}
           >
             <option value="">All</option>
-            <option value="chair">Chair</option>
-            <option value="desk">Desk</option>
-            <option value="storageCabinet">Storage Cabinet</option>
-            <option value="bed">Bed</option>
-            <option value="wardrobe">Wardrobe</option>
-            <option value="entrywayCloset">Entryway Closet</option>
-            <option value="sofa">Sofa</option>
-            <option value="armchair">Armchair</option>
-            <option value="dresser">Dresser</option>
-            <option value="bedsideTable">Bedside Table</option>
-            <option value="kitchenTable">Kitchen Table</option>
-            <option value="diningChair">Dining Chair</option>
+            {allowedAdditionalTypes.map((type) => (
+              <option key={type.value} value={type.value}>
+                {type.label}
+              </option>
+            ))}
           </select>
         </div>
       </div>
@@ -121,15 +166,22 @@ export default function PricesClient({ data }: PricesClientProps) {
               <h4 className="text-md leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center prices">
                 {item.title}
               </h4>
-              <h4 className="font-sm text-sm underline mt-1 prices">{item.brand}</h4>
-              <p className="text-gray-500 mt-2 prices">{item.rentPrice} Kč / month</p>
+              <h4 className="font-sm text-sm underline mt-1 prices">
+                {item.brand}
+              </h4>
+              <p className="text-gray-500 mt-2 prices">
+                {item.rentPrice} Kč / month
+              </p>
             </div>
           </div>
         ))}
       </div>
       {/* Scroll to Top Button */}
       {showScrollButton && (
-        <Button onClick={scrollToTop} className="fixed bottom-8 right-5 py-5 px-4 rounded-full shadow-lg transition-all duration-300">
+        <Button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-5 py-5 px-4 rounded-full shadow-lg transition-all duration-300"
+        >
           <ArrowUp size={35} />
         </Button>
       )}
