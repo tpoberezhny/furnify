@@ -97,6 +97,19 @@ body {
     font-size: 20px;
   }
 
+  .mainImageTitle {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .mainImagePrices {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    font-size: 16;
+    line-height: 22px;
+  }
+
   .title {
     @apply text-3xl md:text-4xl lg:text-[52px] font-bold leading-[1.8rem] lg:leading-[3.1rem] tracking-tight;
   }
