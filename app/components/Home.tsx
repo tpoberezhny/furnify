@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import { TypeWriter } from "../lib/interface";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const TypeWriterOptions: TypeWriter = {
@@ -60,6 +60,10 @@ export default function Home() {
     },
   ];
 
+  useEffect(() => {
+    console.log(activeHover);
+  }, [activeHover])
+
   return (
     <div className="relative mt-20 text-center px-4 mx-auto max-w-6xl">
       <div className="relative z-10">
@@ -79,12 +83,12 @@ export default function Home() {
       </div>
 
       <div className="relative md:-mt-10 mt-6 max-w-6xl mx-auto">
-        <div className="relative w-full aspect-[1312/724] rounded-xl ">
+        <div className="relative w-full aspect-[1312/724] ">
           <Image
             src="/assets/homeSelection.png"
             alt="home"
             fill
-            className="object-cover mx-auto md:mt-0 md:[mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
+            className="object-cover rounded-xl mx-auto md:mt-0 md:[mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
             priority
           />
 
