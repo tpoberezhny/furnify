@@ -98,7 +98,7 @@ export default function PricesClient({ data }: PricesClientProps) {
         Price
         <span className="text-primary">s</span>
       </h1>
-      <h3 className="description-text mb-10 md:mb-16 max-w-3xl mx-auto">
+      <h3 className="description-text mb-10 md:mb-16 max-w-3xl mx-auto dark:invert">
         Contact us, describe your request, and we will send you a full furniture
         catalog tailored to your needs. What you see on the website is just a
         small part of our assortment.
