@@ -30,7 +30,7 @@ export default function HowItWorks() {
               1. Submit your request:
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
-              Contact us to request furniture.
+              Contact us by filling our your personal/business details and the message field in the form to request furniture. 
             </p>
           </div>
         </div>
