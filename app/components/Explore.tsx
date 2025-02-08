@@ -29,7 +29,7 @@ export default async function Explore() {
       </h1>
       <h3 className="description-text customTopMargin dark:invert">
         Explore a wide selection of furniture for offices, hotels,
-        <br /> and homes, designed to combine style, functionality, and comfort
+        <br className="hidden md:block"/> and homes, designed to combine style, functionality, and comfort
         for any space
       </h3>
       <Link href="/prices">

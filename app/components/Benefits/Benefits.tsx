@@ -40,8 +40,8 @@ export default function Benefits() {
         </h1>
         <h3 className="description-text customTopMargin dark:invert">
           Our product is not only about a different way of using furniture but
-          also about a range of <span className="text-primary">advantages</span>
-          <br />
+          also about a range of <span className="text-primary">advantages </span>
+          <br className="hidden md:block"/>
           that allow you to stop worrying about furniture altogether
         </h3>
       </div>
