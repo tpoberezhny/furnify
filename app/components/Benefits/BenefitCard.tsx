@@ -22,7 +22,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
       <div className={`absolute ${positionClasses} p-4`}>
         {blurTextBg ? (
           <div className="bg-white bg-opacity-80 background-blur-sm p-3 rounded dark:invert">
-            <h2 className="font-semibold text-lg dark:invert">{title}</h2>
+            <h2 className="font-semibold text-xl dark:invert">{title}</h2>
             <p className="text-sm mt-3 dark:invert">{description}</p>
           </div>
         ) : (

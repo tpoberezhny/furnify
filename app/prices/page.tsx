@@ -1,6 +1,8 @@
 import { client } from "../lib/sanity";
 import PricesClient from "../components/PricesClient";
 
+export const revalidate = 60;
+
 async function getData() {
   const query = `*[_type == "furnify"] | order(rentPrice asc) {
     title,

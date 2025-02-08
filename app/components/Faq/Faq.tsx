@@ -7,7 +7,7 @@ export default function Faq() {
     {
       question: "What is Furnify and how does it work?",
       answer:
-        "Furnify is a company that allows you to acquire furniture through a subscription by paying a monthly fee. Choose the furniture you like, contact us, and we will send you an offer. If you wanted to purchase specific furniture that you !dont! see on our website, send us a link to the item, and we will provide it to you on a subscription basis.",
+        "Furnify is a company that allows you to acquire furniture through a subscription by paying a monthly fee. Choose the furniture you like, contact us, and we will send you an offer. If you wanted to purchase specific furniture that you don't see on our website, send us a link to the item, and we will provide it to you on a subscription basis.",
     },
     {
       question:

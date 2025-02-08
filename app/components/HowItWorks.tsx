@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function HowItWorks() {
   return (
-    <div id="howItWorks" className="mt-10 lg:mt-20 text-center max-w-6xl mx-auto scroll-mt-20">
+    <div
+      id="howItWorks"
+      className="mt-10 lg:mt-20 text-center max-w-6xl mx-auto scroll-mt-20"
+    >
       <div>
         <h1 className="title leading-[2rem] lg:leading-[3.3rem]">
           Upgrade your <span className="text-primary">spaces</span>
@@ -26,18 +29,19 @@ export default function HowItWorks() {
             className="object-contain mx-auto [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
           />
           <div className="mb-5 p-2">
-            <h2 className="text-left mt-8 font-semibold text-lg dark:invert">
+            <h2 className="text-left mt-8 font-semibold text-xl dark:invert">
               1. Submit your request:
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
-              Contact us by filling our your personal/business details and the message field in the form to request furniture. 
+              Contact us by filling out your personal/business details and the
+              message field in the form to request furniture.
             </p>
           </div>
         </div>
         {/*Call from Furnify */}
         <div className="bg-gray-50 rounded-2xl">
           <div className="p-4">
-            <h2 className="text-left mt-3 font-semibold text-lg dark:invert">
+            <h2 className="text-left mt-3 font-semibold text-xl dark:invert">
               2. Consulting and planning:
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
@@ -63,11 +67,12 @@ export default function HowItWorks() {
             className="object-contain mx-auto [mask-image:linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
           />
           <div className="mb-5 p-2">
-            <h2 className="text-left mt-8 font-semibold text-lg dark:invert">
+            <h2 className="text-left mt-8 font-semibold text-xl dark:invert">
               3. Subscription:
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
-              You will receive a subscription offer from us.
+              You will receive a subscription offer from us. Now you have
+              furniture for which you pay a small amount monthly.
             </p>
           </div>
         </div>

@@ -4,6 +4,8 @@ import { carusel } from "../lib/interface";
 import SwiperComponent from "./SwiperComponent";
 import Link from "next/link";
 
+export const revalidate = 60;
+
 async function getCaruselData() {
   const query = `*[_type == "furnify"] | order(_createdAt desc) {
     title,
