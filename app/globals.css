@@ -104,7 +104,20 @@ body {
     min-width: 150px;
   }
 
+  .mainImageType {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
   .mainImagePrices {
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .mainImagePricesPhone {
     font-family: var(--font-montserrat), sans-serif;
     font-weight: 500;
     font-size: 14;
