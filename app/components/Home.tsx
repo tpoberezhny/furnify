@@ -16,6 +16,19 @@ export default function Home() {
   };
 
   const [activeHover, setActiveHover] = useState<number | null>(null);
+  const [isHoveredEnabled, setIsHoveredEnabled] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hoverQuery = window.matchMedia("(hover: hover)");
+      setIsHoveredEnabled(hoverQuery.matches);
+      const handleMediaChange = (e: MediaQueryListEvent) => {
+        setIsHoveredEnabled(e.matches);
+      };
+      hoverQuery.addEventListener("change", handleMediaChange);
+      return () => hoverQuery.removeEventListener("change", handleMediaChange);
+    }
+  }, []);
 
   const interactiveCircles = [
     {
@@ -60,10 +73,6 @@ export default function Home() {
     },
   ];
 
-  useEffect(() => {
-    console.log(activeHover);
-  }, [activeHover])
-
   return (
     <div className="relative mt-20 text-center px-4 mx-auto max-w-6xl">
       <div className="relative z-10">
@@ -102,8 +111,12 @@ export default function Home() {
               {/* The hotspot circle */}
               <div
                 className="w-[50px] h-[50px] rounded-full cursor-pointer flex items-center justify-center z-10"
-                onMouseEnter={() => setActiveHover(circle.id)}
-                onMouseLeave={() => setActiveHover(null)}
+                onMouseEnter={
+                  isHoveredEnabled ? () => setActiveHover(circle.id) : undefined
+                }
+                onMouseLeave={
+                  isHoveredEnabled ? () => setActiveHover(null) : undefined
+                }
                 onClick={() =>
                   // Toggle tooltip on click for mobile: if already active, hide it.
                   setActiveHover(activeHover === circle.id ? null : circle.id)
@@ -113,7 +126,9 @@ export default function Home() {
               {/* Tooltip/modal that appears under the circle */}
               {activeHover === circle.id && (
                 <div className="absolute md:top-full top-1/3 left-1/2 transform -translate-x-1/2 mt-2 md:py-1 bg-gray-50 rounded z-[51]">
-                  <p className="mainImageType text-center mb-[-5px] md:mb-0 dark:invert">{circle.type}</p>
+                  <p className="mainImageType text-center mb-[-5px] md:mb-0 dark:invert">
+                    {circle.type}
+                  </p>
                   <p className="mainImageTitle text-center md:p-1 md:mb-0 w-full dark:invert">
                     {circle.title}
                   </p>
