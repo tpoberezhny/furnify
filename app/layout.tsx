@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,8 +38,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          <main className="max-w-8xl mx-auto px-4 py-5">{children}</main>
-          <SpeedInsights />
+          <main className="max-w-8xl mx-auto px-4 py-5">
+            {children}
+            <Analytics />
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
