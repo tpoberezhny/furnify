@@ -25,7 +25,7 @@ export default function SwiperComponent({ data }: SwiperComponentProps) {
       speed={8000}
       loop={true}
       freeMode={true}
-      allowTouchMove={false}
+      allowTouchMove={true}
       className="mt-10 md:mt-16"
     >
       {data.map((item, index) => (
