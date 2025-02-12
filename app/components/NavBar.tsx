@@ -67,7 +67,7 @@ export default function NavBar() {
             <div className="hidden md:block">
               <ModeToggle />
             </div>
-            <div className="md:hidden">
+            <div className="md:hidden mt-1 md:mt-0">
               <button onClick={() => setBurgerOpen((prev) => !prev)}>
                 {burgerOpen ? <X size={24} /> : <Menu size={25} />}
               </button>
