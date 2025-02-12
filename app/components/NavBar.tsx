@@ -12,6 +12,7 @@ import { Menu, X } from "lucide-react";
 export default function NavBar() {
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
   const [contactOpen, setContactOpen] = useState(false);
   const [burgerOpen, setBurgerOpen] = useState(false);
 
@@ -22,7 +23,6 @@ export default function NavBar() {
       ? "/assets/blackThemeLogo.svg"
       : "/assets/whiteThemeLogo.svg";
 
-  // Define nav links once for reuse
   const navLinks = [
     { href: "/#furniture", label: "Furniture" },
     { href: "/#benefits", label: "Benefits" },
@@ -55,7 +55,7 @@ export default function NavBar() {
             ))}
           </div>
 
-          {/* Right Side: Contact Button always visible */}
+          {/* Right Side */}
           <div className="flex items-center gap-4">
             <Button
               onClick={() => setContactOpen(true)}
@@ -64,43 +64,42 @@ export default function NavBar() {
             >
               Contact Us
             </Button>
-            {/* Desktop: show ModeToggle */}
             <div className="hidden md:block">
               <ModeToggle />
             </div>
-            {/* Mobile: show Burger Icon instead of ModeToggle */}
             <div className="md:hidden">
               <button onClick={() => setBurgerOpen((prev) => !prev)}>
-                {burgerOpen ? (
-                  <X size={24} className="mt-1" />
-                ) : (
-                  <Menu size={25} className="mt-1" />
-                )}
+                {burgerOpen ? <X size={24} /> : <Menu size={25} />}
               </button>
             </div>
           </div>
         </div>
-
-        {/* Mobile Burger Dropdown Menu */}
-        {burgerOpen && (
-          <div className="absolute rounded-lg text-center w-full h-[100vh] top-full bg-[#00B6BF] dark:bg-[#008089] z-50">
-            <div className="flex flex-col px-4 pt-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setBurgerOpen(false)}
-                  className="text-white text-left text-xl mb-[0.9rem] border-b border-gray-300 dark:border-gray-700"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-            <div className=" text-center">
-              <ModeToggle />
-            </div>
+        {/* Puttin the Burger inside of the DOM to handle transition */}
+        <div
+          className={`
+            absolute top-full right-0
+            w-full h-[100vh] z-50 rounded-lg text-center
+            bg-[#00B6BF] dark:bg-[#008089]
+            transform transition-transform duration-300 ease-in-out
+            ${burgerOpen ? "translate-x-0" : "translate-x-full"}
+          `}
+        >
+          <div className="flex flex-col px-4 pt-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setBurgerOpen(false)}
+                className="text-white text-left text-xl mb-[0.9rem] border-b border-gray-300 dark:border-gray-700"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
-        )}
+          <div className="text-center">
+            <ModeToggle />
+          </div>
+        </div>
       </div>
 
       {contactOpen && <ContactModal onClose={() => setContactOpen(false)} />}
