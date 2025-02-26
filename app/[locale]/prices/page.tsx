@@ -1,4 +1,4 @@
-import { client } from "../../lib/sanity";
+import { client } from "@lib/sanity";
 import PricesClient from "../components/PricesClient";
 
 export const revalidate = 60;

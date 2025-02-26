@@ -6,5 +6,9 @@
     "prices": "E-shop",
     "faq": "FAQ",
     "contactUs": "Contact Us"
+  },
+  "home": {
+    "title": "Furnish your office",
+    "typeWriterTitle": "with subscription model"
   }
 }

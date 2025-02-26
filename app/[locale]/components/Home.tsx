@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import { TypeWriter } from "../../lib/interface";
+import { TypeWriter } from "@lib/interface";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("home");
   const TypeWriterOptions: TypeWriter = {
-    strings: ["office, hotel and home"],
+    strings: [t("typeWriterTitle")],
     autoStart: true,
     loop: false,
     deleteSpeed: Infinity,
@@ -77,12 +79,11 @@ export default function Home() {
     <div className="relative mt-20 text-center px-4 mx-auto max-w-6xl">
       <div className="relative z-10">
         <h1 className="title">
-          Furnish your
+          {t("title")}
           <br />
           <span className="text-primary">
             <Typewriter options={TypeWriterOptions} />
           </span>
-          with subscription
         </h1>
         <h3 className="customTopMargin description-text dark:invert">
           Provide your spaces with stylish, ergonomic furniture on a flexible

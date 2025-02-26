@@ -5,8 +5,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import Image from "next/image";
-import { carusel } from "../../lib/interface";
-import { urlFor } from "../../lib/sanity";
+import { carusel } from "@lib/interface";
+import { urlFor } from "@lib/sanity";
 
 interface SwiperComponentProps {
   data: carusel[];

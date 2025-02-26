@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { itemProps } from "../../lib/interface";
-import { urlFor } from "../../lib/sanity";
+import { itemProps } from "@lib/interface";
+import { urlFor } from "@lib/sanity";
 
 interface PricesClientProps {
   data: itemProps[];

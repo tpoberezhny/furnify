@@ -6,5 +6,9 @@
     "prices": "E-shop",
     "faq": "FAQ",
     "contactUs": "Kontaktujte nás"
+  },
+  "home": {
+    "title": "Zařiďte svou kancelář",
+    "typeWriterTitle": "pomocí modelu předplatného"
   }
 }

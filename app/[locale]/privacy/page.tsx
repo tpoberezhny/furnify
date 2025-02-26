@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 import { PortableText } from "@portabletext/react";
-import { client } from "../lib/sanity";
+import { client } from "@lib/sanity";
 import type { PortableTextBlock } from "@portabletext/react";
 
 export const revalidate = 60;
