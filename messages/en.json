@@ -9,6 +9,27 @@
   },
   "home": {
     "title": "Furnish your office",
-    "typeWriterTitle": "with subscription model"
+    "typeWriterTitle": "with subscription model",
+    "description1": "Provide your spaces with stylish, ergonomic furniture on a flexible subscription model",
+    "description2": "no upfront costs, easy upgrades, and hassle-free maintenance."
+  },
+  "explore": {
+    "titlePrimary": "Everything",
+    "title1": "you need",
+    "title2": "for your workflow",
+    "description1": "Explore flexible office furniture, from ergonomic seating to functional desks,",
+    "description2": "we offer everything you need to create aproductive and comfortable workspace."
+  },
+  "howItWorks": {
+    "title1": "Upgrade your",
+    "title2": "workspace",
+    "title3": "in just a few steps",
+    "description": "Start using furniture on a subscription basis for your office, and from now on, expanding your team or moving to a new office will no longer be a hassle.",
+    "1step": "Submit your request:",
+    "1stepDescription": "Contact us by filling out your personal/business details and the message field in the form to request furniture.",
+    "2step": "Consulting and planning:",
+    "2stepDescription": "We'll contact you and discuss the details and understand your demand.",
+    "3step": "Subscription:",
+    "3stepDescription": "You will receive a subscription offer from us. Now you have furniture for which you pay a small amount monthly."
   }
 }

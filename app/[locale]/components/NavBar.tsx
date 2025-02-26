@@ -28,7 +28,7 @@ export default function NavBar() {
 
   const navLinks = [
     { href: "/#furniture", label: t("furniture") },
-    { href: "/prices", label: t("prices") },
+    { href: "/eshop", label: t("prices") },
     { href: "/#howItWorks", label: t("howItWorks") },
     { href: "/#benefits", label: t("benefits") },
     { href: "/#faq", label: t("faq") },

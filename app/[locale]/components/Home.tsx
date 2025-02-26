@@ -86,9 +86,8 @@ export default function Home() {
           </span>
         </h1>
         <h3 className="customTopMargin description-text dark:invert">
-          Provide your spaces with stylish, ergonomic furniture on a flexible
-          subscription model
-          <br /> no upfront costs, easy upgrades, and hassle-free maintenance.
+          {t("description1")}
+          <br /> {t("description2")}
         </h3>
       </div>
 
@@ -142,15 +141,8 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* Brands Logos */}
       <div className="mt-6">
-        <Image
-          src="/assets/brandsLogoTransparent.png"
-          width={1312}
-          height={100}
-          alt="brands"
-          className="rounded-lg dark:invert opacity-40 mx-auto"
-        />
+        <h2>*Here will be 3 benefits in the future*</h2>
       </div>
     </div>
   );

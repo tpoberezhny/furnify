@@ -9,6 +9,27 @@
   },
   "home": {
     "title": "Zařiďte svou kancelář",
-    "typeWriterTitle": "pomocí modelu předplatného"
+    "typeWriterTitle": "pomocí modelu předplatného",
+    "description1": "Poskytněte svému pracovišti stylový, ergonomický nábytek na flexibilní předplatné",
+    "description2": "žádné počáteční náklady, snadné upgrady a bezproblémová údržba."
+  },
+  "explore": {
+    "titlePrimary": "Vše",
+    "title1": "co potřebujete",
+    "title2": "pro svou práci",
+    "description1": "Objevte flexibilní kancelářský nábytek – od ergonomických židlí po funkční stoly,",
+    "description2": "nabízíme vše, co potřebujete k vytvoření produktivního a pohodlného pracovního prostoru."
+  },
+  "howItWorks": {
+    "title1": "Vylepšete své",
+    "title2": "pracovní prostředí",
+    "title3": "v několika jednoduchých krocích!",
+    "description": "Začněte používat nábytek na bázi předplatného pro svou kancelář a od teď už pro vás nebude rozšíření týmu nebo stěhování do nové kanceláře problém.",
+    "1step": "Pošlete svůj požadavek:",
+    "1stepDescription": "Kontaktujte nás vyplněním vašich osobních/firemních údajů a pole zprávy ve formuláři pro požadavek nábytku.",
+    "2step": "Poradenství a plánování:",
+    "2stepDescription": "Ozveme se vám a projednáme detaily a pochopíme vaši požadavky.",
+    "3step": "Předplatné:",
+    "3stepDescription": "Dostanete od nás nabídku na předplatné. Nyní máte nábytek, za který platíte jenom malou částku měsíčně."
   }
 }

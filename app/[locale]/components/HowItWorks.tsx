@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-export default function HowItWorks() {
+export default async function HowItWorks() {
+  const t = await getTranslations("howItWorks");
   return (
     <div
       id="howItWorks"
@@ -8,14 +10,12 @@ export default function HowItWorks() {
     >
       <div>
         <h1 className="title leading-[2rem] lg:leading-[3.3rem]">
-          Upgrade your <span className="text-primary">spaces</span>
+          {t("title1")} <span className="text-primary">{t("title2")}</span>
           <br />
-          in just a few steps!
+          {t("title3")}
         </h1>
         <h3 className="description-text customTopMargin dark:invert max-w-4xl mx-auto">
-          Start using furniture on a subscription basis for your spaces, and
-          from now on, expanding your team or moving to a new apartment will no
-          longer be a hassle.
+          {t("description")}
         </h3>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
@@ -30,11 +30,10 @@ export default function HowItWorks() {
           />
           <div className="mb-5 p-2">
             <h2 className="text-left mt-8 font-semibold text-xl dark:invert">
-              1. Submit your request:
+              1. {t("1step")}
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
-              Contact us by filling out your personal/business details and the
-              message field in the form to request furniture.
+              {t("1stepDescription")}
             </p>
           </div>
         </div>
@@ -42,11 +41,10 @@ export default function HowItWorks() {
         <div className="bg-gray-50 rounded-2xl">
           <div className="p-4">
             <h2 className="text-left mt-3 font-semibold text-xl dark:invert">
-              2. Consulting and planning:
+              2. {t("2step")}
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
-              We&apos;ll contact you and discuss the details and understand your
-              demand.
+              {t("2stepDescription")}
             </p>
           </div>
           <Image
@@ -68,11 +66,10 @@ export default function HowItWorks() {
           />
           <div className="mb-5 p-2">
             <h2 className="text-left mt-8 font-semibold text-xl dark:invert">
-              3. Subscription:
+              3. {t("3step")}
             </h2>
             <p className="text-left mt-3 font-normal text-base dark:invert">
-              You will receive a subscription offer from us. Now you have
-              furniture for which you pay a small amount monthly.
+              {t("3stepDescription")}
             </p>
           </div>
         </div>
