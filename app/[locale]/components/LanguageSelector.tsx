@@ -9,18 +9,21 @@ const languages = [
   { code: "cz", label: "CZ" },
 ];
 
+// Helper type guard to check if a string is one of our locales
+function isLocale(str: string): str is (typeof locales)[number] {
+  return locales.includes(str as (typeof locales)[number]);
+}
+
 export default function LanguageSelector() {
   const pathname = usePathname();
-
   const segments = pathname.split("/");
-
   const currentLocale = segments[1];
 
   return (
     <div className="flex items-center gap-2">
       {languages.map((language) => {
         const newSegments = [...segments];
-        if (locales.includes(currentLocale as any)) {
+        if (isLocale(currentLocale)) {
           newSegments[1] = language.code;
         } else {
           newSegments.splice(1, 0, language.code);
