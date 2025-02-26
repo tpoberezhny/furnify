@@ -8,8 +8,11 @@ import { Button } from "@/components/ui/button";
 import ContactModal from "./ContactModal";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import LanguageSelector from "./LanguageSelector";
+import { useTranslations } from "next-intl";
 
 export default function NavBar() {
+  const t = useTranslations("nav");
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -24,11 +27,11 @@ export default function NavBar() {
       : "/assets/whiteThemeLogo.svg";
 
   const navLinks = [
-    { href: "/#furniture", label: "Furniture" },
-    { href: "/#benefits", label: "Benefits" },
-    { href: "/#howItWorks", label: "How it Works" },
-    { href: "/prices", label: "Prices" },
-    { href: "/#faq", label: "FAQ" },
+    { href: "/#furniture", label: t("furniture") },
+    { href: "/prices", label: t("prices") },
+    { href: "/#howItWorks", label: t("howItWorks") },
+    { href: "/#benefits", label: t("benefits") },
+    { href: "/#faq", label: t("faq") },
   ];
 
   return (
@@ -42,7 +45,7 @@ export default function NavBar() {
               alt="Logo"
               width={120}
               height={60}
-              className="z-10 mr-6"
+              className="z-10 mr-32"
             />
           </Link>
 
@@ -57,6 +60,9 @@ export default function NavBar() {
 
           {/* Right Side */}
           <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              <LanguageSelector />
+            </div>
             <Button
               onClick={() => setContactOpen(true)}
               variant="default"
@@ -96,7 +102,8 @@ export default function NavBar() {
               </Link>
             ))}
           </div>
-          <div className="text-center">
+          <div className="flex justify-center gap-4">
+            <LanguageSelector />
             <ModeToggle />
           </div>
         </div>

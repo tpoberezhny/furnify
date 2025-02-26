@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
@@ -7,6 +7,9 @@ import ClientProviders from "./components/ClientProviders";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+
+import { NextIntlClientProvider } from "next-intl";
+import {getMessages} from "next-intl/server";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,21 +26,27 @@ export const metadata: Metadata = {
   description: "Rent your furnitures with Furnify",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default async function RootLayout(props: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string | undefined };
+}) {
+  const resolvedParams = await Promise.resolve(props.params);
+  const locale = resolvedParams.locale || "en";
+
+  const messages = await getMessages({locale});
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
         <ClientProviders>
-          <NavBar />
-          <main className="max-w-8xl mx-auto px-4 py-5">
-            {children}
-            <Analytics />
-          </main>
-          <Footer />
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <NavBar />
+            <main className="max-w-8xl mx-auto px-4 py-5">
+              {props.children}
+              <Analytics />
+            </main>
+            <Footer />
+          </NextIntlClientProvider>
         </ClientProviders>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import { TypeWriter } from "../lib/interface";
+import { TypeWriter } from "../../lib/interface";
 import { useEffect, useState } from "react";
 
 export default function Home() {

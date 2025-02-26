@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { client } from "../lib/sanity";
-import { carusel } from "../lib/interface";
+import { client } from "../../lib/sanity";
+import { carusel } from "../../lib/interface";
 import SwiperComponent from "./SwiperComponent";
 import Link from "next/link";
 

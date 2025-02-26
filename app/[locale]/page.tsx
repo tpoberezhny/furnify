@@ -9,8 +9,8 @@ export default function Furnify() {
     <>
     <Home />
     <Explore />
-    <LazyBenefits />
     <HowItWorks />
+    <LazyBenefits />
     <Faq />
     </>
   )
