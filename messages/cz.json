@@ -5,7 +5,7 @@
     "howItWorks": "Jak to funguje",
     "prices": "E-shop",
     "faq": "FAQ",
-    "contactUs": "Kontaktujte nás"
+    "contactUs": "Kontakt"
   },
   "home": {
     "title": "Zařiďte svou kancelář",
@@ -31,5 +31,31 @@
     "2stepDescription": "Ozveme se vám a projednáme detaily a pochopíme vaši požadavky.",
     "3step": "Předplatné:",
     "3stepDescription": "Dostanete od nás nabídku na předplatné. Nyní máte nábytek, za který platíte jenom malou částku měsíčně."
+  },
+  "eshop": {
+    "description": "Kontaktujte nás pro nákup nábytku, a pokud v našem obchodě nenajdete přesně to, co vám vyhovuje, můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců."
+  },
+  "faq": {
+    "1question": "Co je Furnify a jak to funguje?",
+    "1answer": "Furnify je společnost, která vám umožňuje získat nábytek formou předplatného s měsíční platbou. Vyberte si nábytek, který se vám líbí, kontaktujte nás a my vám zašleme nabídku. Pokud hledáte konkrétní nábytek, který na našem webu nevidíte, kontaktujte nás a můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců.",
+    "2question": "Jaké typy nábytku lze pronajmout na předplatné?",
+    "2answer": "S naším předplatným si můžete pronajmout nábytek pro kanceláře, hotely nebo domácnosti: kancelářské židle, stoly, úložné skříňky a další kancelářské vybavení.",
+    "3question": "Proč je kancelářský nábytek na předplatné výhodnější než tradiční nákup?",
+    "3answer": "S naším servisem nemusíte investovat velkou částku do vybavení nové kanceláře. Platíte pouze měsíční poplatek, což je mnohem pohodlnější. Navíc poskytujeme údržbu nábytku pro drobné opravy a také dopravu a montáž zdarma.",
+    "4question": "Je možné si u vás nábytek pouze koupit místo pronájmu na předplatné?",
+    "4answer": "Ano, nabízíme také možnost přímého nákupu nábytku s možností zpětného odkupu. To znamená, že až přijde čas a budete se chtít nábytku zbavit, můžete nám ho nabídnout zpět.",
+    "5question": "Je možné během aktivního předplatného nábytek vyměnit nebo přidat nový?",
+    "5answer": "Ano, během předplatného můžete nábytek upgradovat nebo přidat nové kusy.",
+    "6question": "Kdo zajišťuje dopravu a montáž?",
+    "6answer": "Dopravu a montáž nábytku zajišťuje naše společnost zdarma.",
+    "7question": "Je možné předplatné zrušit a jaké jsou podmínky?",
+    "7answer": "Minimální doba předplatného je 6 měsíců. Pro zrušení předplatného je nutné informovat naši společnost 2 měsíce předem. Nemáme žádné sankce ani pokuty."
+  },
+  "footer": {
+    "home": "Domů",
+    "terms": "Podmínky",
+    "privacy": "Zásady ochrany osobních údajů",
+    "reserved": "Všechna práva vyhrazena.",
+    "contact": "Kontaktujte nás"
   }
 }

@@ -31,5 +31,31 @@
     "2stepDescription": "We'll contact you and discuss the details and understand your demand.",
     "3step": "Subscription:",
     "3stepDescription": "You will receive a subscription offer from us. Now you have furniture for which you pay a small amount monthly."
+  },
+  "eshop": {
+    "description": "Contact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers if you can't find exactly what suits you in our store."
+  },
+  "faq": {
+    "1question": "What is Furnify and how does it work?",
+    "1answer": "Furnify is a company that allows you to acquire furniture through a subscription by paying a monthly fee. Choose the furniture you like, contact us, and we will send you an offer. If you wanted to purchase specific furniture that you don't see on our website, сontact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers.",
+    "2question": "What types of furniture can be rented on a subscription basis?",
+    "2answer": "With our subscription service, you can rent furniture for offices, hotels, or homes: office chairs, office desks, under-desk storage cabinets and other office items.",
+    "3question": "Why is office furniture on subscription more advantageous than traditional purchasing?",
+    "3answer": "With our service, you don't need to spend a large sum of money to set up a new office. You only pay a monthly fee, which is much more convenient. Additionally, we provide furniture maintenance for minor repairs, as well as free delivery and assembly.",
+    "4question": "Is it possible to simply purchase office furniture from you instead of renting it through a subscription?",
+    "4answer": "Yes, we also offer our clients the option to buy furniture outright with the possibility of a buyback. In other words, when the time comes and you need to get rid of the furniture, you can offer it back to us.",
+    "5question": "Is it possible to upgrade or add new furniture during an active subscription?",
+    "5answer": "Yes, you can upgrade your furniture or add new pieces during your subscription.",
+    "6question": "Who handles delivery and assembly?",
+    "6answer": "Delivery and assembly of furniture are handled by our company free of charge.",
+    "7question": "Is it possible to cancel the subscription, and what are the terms?",
+    "7answer": "The minimum subscription period with us is 6 months. To cancel the subscription, you must notify our company 2 months in advance. We do not have any penalties or sanctions."
+  },
+  "footer": {
+    "home": "Home",
+    "terms": "Terms",
+    "privacy": "Privacy Policy",
+    "reserved": "All rights reserved.",
+    "contact": "Contact Us"
   }
 }

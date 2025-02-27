@@ -1,4 +1,5 @@
 import { ImageUrlBuilderOptions } from "@sanity/image-url/lib/types/types";
+import React from "react";
 
 export interface carusel {
   title: string;
@@ -31,3 +32,7 @@ export interface BenefitCardProps {
   blurTextBg?: boolean;
 }
 
+export type FAQItemProps = {
+  question: React.ReactNode;
+  answer: React.ReactNode;
+};

@@ -6,11 +6,7 @@ import {
 } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 import clsx from "clsx";
-
-type FAQItemProps = {
-  question: string;
-  answer: string;
-};
+import { FAQItemProps } from "@/app/lib/interface";
 
 const FAQItem = ({ question, answer }: FAQItemProps) => (
   <Disclosure as="div">

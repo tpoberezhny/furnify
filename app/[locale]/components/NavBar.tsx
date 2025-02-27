@@ -68,7 +68,7 @@ export default function NavBar() {
               variant="default"
               className="bg-primary text-white"
             >
-              Contact Us
+              {t("contactUs")}
             </Button>
             <div className="hidden md:block">
               <ModeToggle />
@@ -102,7 +102,7 @@ export default function NavBar() {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mr-6">
             <LanguageSelector />
             <ModeToggle />
           </div>

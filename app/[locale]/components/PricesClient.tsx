@@ -6,12 +6,14 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { itemProps } from "@lib/interface";
 import { urlFor } from "@lib/sanity";
+import { useTranslations } from "next-intl";
 
 interface PricesClientProps {
   data: itemProps[];
 }
 
 export default function PricesClient({ data }: PricesClientProps) {
+  const t = useTranslations("eshop");
   const [mainTypeFilter, setMainTypeFilter] = useState<string>("all");
   const [additionalTypeFilter, setAdditionalTypeFilter] = useState<string>("");
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -95,13 +97,10 @@ export default function PricesClient({ data }: PricesClientProps) {
   return (
     <div className="max-w-5xl mt-20 text-center mx-auto">
       <h1 className="title mb-8">
-        Price
-        <span className="text-primary">s</span>
+        <span className="text-primary">E</span>-Shop
       </h1>
       <h3 className="description-text mb-10 md:mb-16 max-w-3xl mx-auto dark:invert">
-        Contact us, describe your request, and we will send you a full furniture
-        catalog tailored to your needs. What you see on the website is just a
-        small part of our assortment.
+        {t("description")}
       </h3>
       {/* Filters Section */}
       <div className="flex flex-col md:flex-row md:justify-between mb-8 space-y-5 md:space-y-0">
