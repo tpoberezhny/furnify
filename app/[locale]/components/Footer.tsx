@@ -41,7 +41,7 @@ const Footer = () => {
           />
         </Link>
       </div>
-      <div className="flex justify-center gap-6 opacity-50 text-base">
+      <div className="flex justify-center gap-4 md:gap-6 opacity-50 text-base">
         <Link href={`/${currentLocale}/`}>{t("home")}</Link>
         <Link href={`/${currentLocale}/terms`}>{t("terms")}</Link>
         <Link href={`/${currentLocale}/privacy`}>{t("privacy")}</Link>
