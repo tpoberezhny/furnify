@@ -11,7 +11,7 @@ interface PrivacyData {
 }
 
 export default async function PrivacyPage({params}: {params: {locale: string}}) {
-  const documentType = params.locale === "cz" ? "privacyCz" : "privacyEn";
+  // const documentType = params.locale === "cz" ? "privacyCz" : "privacyEn";
   /**Then pass docum,entType to groq (privacy) */
   const query = groq`
     *[_type == "privacy"][0]{
