@@ -7,12 +7,19 @@ import { Button } from "@components/ui/button";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const Footer = () => {
   const t = useTranslations("footer");
+
+  const params = useParams();
+  const currentLocale = params.locale || "en";
+
   const { theme, systemTheme } = useTheme();
-  const [contactOpen, setContactOpen] = useState(false);
   const currentTheme = theme === "system" ? systemTheme : theme;
+  
+  const [contactOpen, setContactOpen] = useState(false);
+
 
   if (!currentTheme) return null;
 
@@ -35,9 +42,9 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex justify-center gap-6 opacity-50 text-base">
-        <Link href="/">{t("home")}</Link>
-        <Link href="/terms">{t("terms")}</Link>
-        <Link href="/privacy">{t("privacy")}</Link>
+        <Link href={`/${currentLocale}/`}>{t("home")}</Link>
+        <Link href={`/${currentLocale}/terms`}>{t("terms")}</Link>
+        <Link href={`/${currentLocale}/privacy`}>{t("privacy")}</Link>
       </div>
       <div className="items-center justify-center flex">
       <Button

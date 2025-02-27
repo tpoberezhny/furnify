@@ -10,7 +10,9 @@ interface TermsData {
   content: PortableTextBlock[];
 }
 
-export default async function TermsPage() {
+export default async function TermsPage({params}: {params: {locale: string}}) {
+  const documentType = params.locale === "cz" ? "termsCz" : "termsEn";
+  /**Then pass docum,entType to groq (terms) */
   const query = groq`
     *[_type == "terms"][0]{
       title,

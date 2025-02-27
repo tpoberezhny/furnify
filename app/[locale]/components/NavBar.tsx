@@ -2,17 +2,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useParams } from "next/navigation";
+
 import { ModeToggle } from "./ModeToggle";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+
 import ContactModal from "./ContactModal";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+
 import LanguageSelector from "./LanguageSelector";
 import { useTranslations } from "next-intl";
 
 export default function NavBar() {
   const t = useTranslations("nav");
+
+  const params = useParams();
+  const currentLocale = params.locale || "en";
+
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -27,11 +35,11 @@ export default function NavBar() {
       : "/assets/whiteThemeLogo.svg";
 
   const navLinks = [
-    { href: "/#furniture", label: t("furniture") },
-    { href: "/eshop", label: t("prices") },
-    { href: "/#howItWorks", label: t("howItWorks") },
-    { href: "/#benefits", label: t("benefits") },
-    { href: "/#faq", label: t("faq") },
+    { href: `/${currentLocale}/#furniture`, label: t("furniture") },
+    { href: `/${currentLocale}/eshop`, label: t("prices") },
+    { href: `/${currentLocale}/#howItWorks`, label: t("howItWorks") },
+    { href: `/${currentLocale}/#benefits`, label: t("benefits") },
+    { href: `/${currentLocale}/#faq`, label: t("faq") },
   ];
 
   return (
