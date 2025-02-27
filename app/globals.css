@@ -132,6 +132,10 @@ body {
     @apply text-description text-sm font-normal md:text-lg md:leading-normal;
   }
 
+  .benefits-description {
+    @apply font-montserrat text-description text-sm font-medium md:text-xl md:leading-normal;
+  }
+
   .customTopMargin {
     @apply mt-7 lg:mt-10;
   }

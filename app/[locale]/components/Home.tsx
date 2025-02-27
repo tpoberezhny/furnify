@@ -141,8 +141,10 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="mt-6">
-        <h2>*Here will be 3 benefits in the future*</h2>
+      <div className="mt-6 flex flex-row justify-center gap-2 max-w-4xl items-center mx-auto py-3">
+        <h2 className="benefits-description">{t("benefit1")}</h2> |
+        <h2 className="benefits-description">{t("benefit2")}</h2> |
+        <h2 className="benefits-description">{t("benefit3")}</h2>
       </div>
     </div>
   );

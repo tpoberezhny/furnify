@@ -3,9 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Button } from "@components/ui/button";
-import { useState } from "react";
-import ContactModal from "./ContactModal";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 
@@ -17,9 +14,6 @@ const Footer = () => {
 
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  
-  const [contactOpen, setContactOpen] = useState(false);
-
 
   if (!currentTheme) return null;
 
@@ -46,16 +40,7 @@ const Footer = () => {
         <Link href={`/${currentLocale}/terms`}>{t("terms")}</Link>
         <Link href={`/${currentLocale}/privacy`}>{t("privacy")}</Link>
       </div>
-      <div className="items-center justify-center flex">
-      <Button
-          onClick={() => setContactOpen(true)}
-          variant="default"
-          className="bg-primary text-white my-4"
-        >
-          {t("contact")}
-        </Button>
-      </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-3">
         <a className="text-base" href="mailto:ceo@furnify.cz">
           ceo@furnify.cz
         </a>
@@ -63,7 +48,6 @@ const Footer = () => {
       <p className="text-center text-base mt-3 mb-10 text-gray-500">
         © 2025 Furnify. {t("reserved")}
       </p>
-      {contactOpen && <ContactModal onClose={() => setContactOpen(false)} />}
     </footer>
   );
 };
