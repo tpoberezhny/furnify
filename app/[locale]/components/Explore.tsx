@@ -1,9 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { client } from "@lib/sanity";
 import { carusel } from "@lib/interface";
 import SwiperComponent from "./SwiperComponent";
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import EshopBtn from "./EshopBtn";
 
 export const revalidate = 60;
 
@@ -36,14 +35,11 @@ export default async function Explore() {
         {t("description1")}
         <br className="hidden md:block" /> {t("description2")}
       </h3>
-      <Link href="/eshop">
-        <Button
-          className="customTopMargin p-6 rounded-2xl font-medium text-md"
-          title="Prices"
-        >
-          E-shop
-        </Button>
-      </Link>
+      <h2 className="mt-10">*Картинки-визуализации*</h2>
+      <div className="text-center customTopMargin">
+        <h2 className="description-text">{t("eshop")}</h2>
+      </div>
+      <EshopBtn />
       <SwiperComponent data={data} />
     </div>
   );
