@@ -37,7 +37,7 @@ export default async function Explore() {
       </h3>
       <h2 className="mt-10">*Картинки-визуализации*</h2>
       <div className="text-center customTopMargin">
-        <h2 className="description-text">{t("eshop")}</h2>
+        <h2 className="description-text dark:invert">{t("eshop")}</h2>
       </div>
       <EshopBtn />
       <SwiperComponent data={data} />

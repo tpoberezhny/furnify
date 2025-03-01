@@ -133,7 +133,7 @@ body {
   }
 
   .benefits-description {
-    @apply font-montserrat text-description text-sm font-medium md:text-xl md:leading-normal;
+    @apply font-montserrat text-description text-sm font-medium md:text-xl md:leading-normal dark:invert;
   }
 
   .customTopMargin {

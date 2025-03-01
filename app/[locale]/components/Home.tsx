@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import { TypeWriter } from "@lib/interface";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -16,63 +17,55 @@ export default function Home() {
     cursor: "_",
   };
 
-  // const [activeHover, setActiveHover] = useState<number | null>(null);
-  // const [isHoveredEnabled, setIsHoveredEnabled] = useState(false);
+  const [activeHover, setActiveHover] = useState<number | null>(null);
+  const [isHoveredEnabled, setIsHoveredEnabled] = useState(false);
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     const hoverQuery = window.matchMedia("(hover: hover)");
-  //     setIsHoveredEnabled(hoverQuery.matches);
-  //     const handleMediaChange = (e: MediaQueryListEvent) => {
-  //       setIsHoveredEnabled(e.matches);
-  //     };
-  //     hoverQuery.addEventListener("change", handleMediaChange);
-  //     return () => hoverQuery.removeEventListener("change", handleMediaChange);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hoverQuery = window.matchMedia("(hover: hover)");
+      setIsHoveredEnabled(hoverQuery.matches);
+      const handleMediaChange = (e: MediaQueryListEvent) => {
+        setIsHoveredEnabled(e.matches);
+      };
+      hoverQuery.addEventListener("change", handleMediaChange);
+      return () => hoverQuery.removeEventListener("change", handleMediaChange);
+    }
+  }, []);
 
-  // const interactiveCircles = [
-  //   {
-  //     id: 1,
-  //     top: "46%",
-  //     left: "14%",
-  //     type: "Armchair",
-  //     title: "Ekenaset - IKEA",
-  //     priceRent: "415 Kč/month",
-  //   },
-  //   {
-  //     id: 2,
-  //     top: "25%",
-  //     left: "43%",
-  //     type: "Chair",
-  //     title: "AlzaErgo Chair Wave 1",
-  //     priceRent: "415 Kč/month",
-  //   },
-  //   {
-  //     id: 3,
-  //     top: "28%",
-  //     left: "57%",
-  //     type: "Desk",
-  //     title: "AlzaErgo ET5 AiO Essential",
-  //     priceRent: "415 Kč/month",
-  //   },
-  //   {
-  //     id: 4,
-  //     top: "67%",
-  //     left: "51.5%",
-  //     type: "Bed",
-  //     title: "Brimnes - IKEA",
-  //     priceRent: "725 Kč/month",
-  //   },
-  //   {
-  //     id: 5,
-  //     top: "71%",
-  //     left: "93%",
-  //     type: "Storage Cabinet",
-  //     title: "Walpole - Beliani",
-  //     priceRent: "258 Kč/month",
-  //   },
-  // ];
+  const interactiveCircles = [
+    {
+      id: 1,
+      top: "28%",
+      left: "7.2%",
+      type: "Armchair1",
+      title: "Ekenaset - IKEA",
+      priceRent: "415 Kč/month",
+    },
+    {
+      id: 2,
+      top: "51.5%",
+      left: "16.5%",
+      type: "Chair2",
+      title: "AlzaErgo Chair Wave 1",
+      priceRent: "415 Kč/month",
+    },
+    {
+      id: 3,
+      top: "59%",
+      left: "32.2%",
+      type: "Desk3",
+      title: "AlzaErgo ET5 AiO Essential",
+      priceRent: "415 Kč/month",
+    },
+    {
+      id: 4,
+      top: "59.5%",
+      left: "48.7%",
+      type: "Bed4",
+      title: "Brimnes - IKEA",
+      priceRent: "725 Kč/month",
+    },
+  ];
 
   return (
     <div className="relative mt-20 text-center px-4 mx-auto max-w-6xl">
@@ -100,15 +93,15 @@ export default function Home() {
             priority
           />
 
-          {/* Interactive Circles
+          {/* Interactive Circles */}
           {interactiveCircles.map((circle) => (
             <div
               key={circle.id}
               className="absolute"
               style={{ top: circle.top, left: circle.left }}
-            > */}
+            >
               {/* The hotspot circle */}
-              {/* <div
+              <div
                 className="w-[50px] h-[50px] rounded-full cursor-pointer flex items-center justify-center z-10"
                 onMouseEnter={
                   isHoveredEnabled ? () => setActiveHover(circle.id) : undefined
@@ -120,10 +113,10 @@ export default function Home() {
                   // Toggle tooltip on click for mobile: if already active, hide it.
                   setActiveHover(activeHover === circle.id ? null : circle.id)
                 }
-              ></div> */}
+              ></div>
 
               {/* Tooltip/modal that appears under the circle */}
-              {/* {activeHover === circle.id && (
+              {activeHover === circle.id && (
                 <div className="absolute md:top-full top-1/3 left-1/2 transform -translate-x-1/2 mt-2 md:py-1 bg-gray-50 rounded z-[51]">
                   <p className="mainImageType text-center mb-[-5px] md:mb-0 dark:invert">
                     {circle.type}
@@ -137,7 +130,7 @@ export default function Home() {
                 </div>
               )}
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
       <div className="mt-6 flex flex-row justify-center gap-2 max-w-4xl items-center mx-auto py-3">
