@@ -7,17 +7,17 @@ export default async function WeAreEco() {
   return (
     <section id="benefits" className="relative py-16 lg:py-24">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="title">
+        <div className="text-center mb-6 md:mb-12">
+          <h1 className="title leading-[1.2]">
             <span className="text-primary">{t("title1")}</span> {t("title2")}
-          </h2>
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Text Card */}
-          <div className="flex items-center justify-center md:h-96 p-2 text-center md:text-left md:p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-out">
+          <div className="flex items-center justify-center md:h-96 p-2 text-center md:text-left md:p-6 rounded-xl dark:shadow-gray-700 shadow-lg transform hover:scale-105 transition duration-300 ease-out">
             <div className="max-w-lg">
-              <p className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-200 text-lg">
                 {t("description")}
               </p>
             </div>
