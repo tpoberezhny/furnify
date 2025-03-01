@@ -1,8 +1,8 @@
 import Explore from "./components/Explore";
 import Faq from "./components/Faq/Faq";
 import Home from "./components/Home";
-// import LazyBenefits from "./components/Benefits/LazyBenefitsWrapper";
 import HowItWorks from "./components/HowItWorks";
+import WeAreEco from "./components/WeAreEco";
 
 export default function Furnify() {
   return (
@@ -10,7 +10,7 @@ export default function Furnify() {
     <Home />
     <Explore />
     <HowItWorks />
-    {/* <LazyBenefits /> */}
+    <WeAreEco />
     <Faq />
     </>
   )

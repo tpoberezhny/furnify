@@ -39,6 +39,10 @@
   "eshop": {
     "description": "Kontaktujte nás pro nákup nábytku, a pokud v našem obchodě nenajdete přesně to, co vám vyhovuje, můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců."
   },
+  "eco": {
+    "title": "Ekologická udržitelnost",
+    "description": "Náš startup nejen pomáhá firmám získávat nábytek, ale také dbá na životní prostředí. Náš obchodní model zahrnuje principy cirkulární ekonomiky, kde se produkt po ukončení používání nevyhazuje a nestává se odpadem znečišťujícím životní prostředí. S Furnify prochází nábytek servisem po skončení předplatného a předává se novému zákazníkovi. A pokud byl nábytek zakoupen, jsme připraveni ho po použití odkoupit a dát mu nový život!"
+  },
   "faq": {
     "1question": "Co je Furnify a jak to funguje?",
     "1answer": "Furnify je společnost, která vám umožňuje získat nábytek formou předplatného s měsíční platbou. Vyberte si nábytek, který se vám líbí, kontaktujte nás a my vám zašleme nabídku. Pokud hledáte konkrétní nábytek, který na našem webu nevidíte, kontaktujte nás a můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců.",

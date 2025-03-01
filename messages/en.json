@@ -39,6 +39,10 @@
   "eshop": {
     "description": "Contact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers if you can't find exactly what suits you in our store."
   },
+  "eco": {
+    "title": "Environmental Sustainability",
+    "description": "Our startup not only helps companies acquire furniture but also cares about the environment. Our business model incorporates the principles of the circular economy, where the product is not discarded and does not end up as waste polluting the environment after purchase. With Furnify, furniture goes through servicing after the subscription ends and is passed on to a new customer. And if the furniture was purchased, we are ready to buy it back after use and give it a new life!"
+  },
   "faq": {
     "1question": "What is Furnify and how does it work?",
     "1answer": "Furnify is a company that allows you to acquire furniture through a subscription by paying a monthly fee. Choose the furniture you like, contact us, and we will send you an offer. If you wanted to purchase specific furniture that you don't see on our website, сontact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers.",
