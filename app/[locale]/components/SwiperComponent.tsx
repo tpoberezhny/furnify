@@ -26,7 +26,7 @@ export default function SwiperComponent({ data }: SwiperComponentProps) {
       loop={true}
       freeMode={true}
       allowTouchMove={true}
-      className="mt-10 md:mt-16"
+      className="mt-10 md:mt-13"
     >
       {data.map((item, index) => (
         <SwiperSlide

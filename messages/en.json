@@ -36,6 +36,12 @@
     "3step": "Subscription:",
     "3stepDescription": "You will receive a subscription offer from us. Now you have furniture for which you pay a small amount monthly."
   },
+  "furnitureSets": {
+    "rent": "Rent Price:",
+    "rentPrice": "CZK/month",
+    "fullPrice": "CZK",
+    "buy": "Buy Price:" 
+  },
   "eshop": {
     "description": "Contact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers if you can't find exactly what suits you in our store."
   },

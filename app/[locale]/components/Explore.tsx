@@ -3,6 +3,7 @@ import { carusel } from "@lib/interface";
 import SwiperComponent from "./SwiperComponent";
 import { getTranslations } from "next-intl/server";
 import EshopBtn from "./EshopBtn";
+import FurnitureSets from "./FurnitureSet";
 
 export const revalidate = 60;
 
@@ -35,7 +36,7 @@ export default async function Explore() {
         {t("description1")}
         <br className="hidden md:block" /> {t("description2")}
       </h3>
-      <h2 className="mt-10">*Картинки-визуализации*</h2>
+      <FurnitureSets />
       <div className="text-center customTopMargin">
         <h2 className="description-text dark:invert">{t("eshop")}</h2>
       </div>

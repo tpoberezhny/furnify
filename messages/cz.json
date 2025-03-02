@@ -36,6 +36,12 @@
     "3step": "Předplatné:",
     "3stepDescription": "Dostanete od nás nabídku na předplatné. Nyní máte nábytek, za který platíte jenom malou částku měsíčně."
   },
+  "furnitureSets": {
+    "rent": "Cena pronajmu:",
+    "rentPrice": "Kč/měsíc",
+    "fullPrice": "Kč",
+    "buy": "Plná cena:" 
+  },
   "eshop": {
     "description": "Kontaktujte nás pro nákup nábytku, a pokud v našem obchodě nenajdete přesně to, co vám vyhovuje, můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců."
   },
