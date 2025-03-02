@@ -14,59 +14,59 @@ interface PricesClientProps {
 
 export default function PricesClient({ data }: PricesClientProps) {
   const t = useTranslations("eshop");
-  const [mainTypeFilter, setMainTypeFilter] = useState<string>("all");
-  const [additionalTypeFilter, setAdditionalTypeFilter] = useState<string>("");
+  // const [mainTypeFilter, setMainTypeFilter] = useState<string>("all");
+  // const [additionalTypeFilter, setAdditionalTypeFilter] = useState<string>("");
   const [showScrollButton, setShowScrollButton] = useState(false);
 
-  const officeAdditionalTypes = [
-    { value: "chair", label: "Chair" },
-    { value: "desk", label: "Desk" },
-    { value: "storageCabinet", label: "Storage Cabinet" },
-    { value: "entrywayCloset", label: "Entryway Closet" },
-    { value: "sofa", label: "Sofa" },
-    { value: "armchair", label: "Armchair" },
-  ];
+  // const officeAdditionalTypes = [
+  //   { value: "chair", label: "Chair" },
+  //   { value: "desk", label: "Desk" },
+  //   { value: "storageCabinet", label: "Storage Cabinet" },
+  //   { value: "entrywayCloset", label: "Entryway Closet" },
+  //   { value: "sofa", label: "Sofa" },
+  //   { value: "armchair", label: "Armchair" },
+  // ];
 
-  const hotelHomeAdditionalTypes = [
-    { value: "bed", label: "Bed" },
-    { value: "entrywayCloset", label: "Entryway Closet" },
-    { value: "wardrobe", label: "Wardrobe" },
-    { value: "sofa", label: "Sofa" },
-    { value: "armchair", label: "Armchair" },
-    { value: "dresser", label: "Dresser" },
-    { value: "bedsideTable", label: "Bedside Table" },
-    { value: "kitchenTable", label: "Kitchen Table" },
-    { value: "diningChair", label: "Dining Chair" },
-  ];
+  // const hotelHomeAdditionalTypes = [
+  //   { value: "bed", label: "Bed" },
+  //   { value: "entrywayCloset", label: "Entryway Closet" },
+  //   { value: "wardrobe", label: "Wardrobe" },
+  //   { value: "sofa", label: "Sofa" },
+  //   { value: "armchair", label: "Armchair" },
+  //   { value: "dresser", label: "Dresser" },
+  //   { value: "bedsideTable", label: "Bedside Table" },
+  //   { value: "kitchenTable", label: "Kitchen Table" },
+  //   { value: "diningChair", label: "Dining Chair" },
+  // ];
 
-  const allAdditionalTypes = [
-    { value: "chair", label: "Chair" },
-    { value: "desk", label: "Desk" },
-    { value: "storageCabinet", label: "Storage Cabinet" },
-    { value: "bed", label: "Bed" },
-    { value: "wardrobe", label: "Wardrobe" },
-    { value: "entrywayCloset", label: "Entryway Closet" },
-    { value: "sofa", label: "Sofa" },
-    { value: "armchair", label: "Armchair" },
-    { value: "dresser", label: "Dresser" },
-    { value: "bedsideTable", label: "Bedside Table" },
-    { value: "kitchenTable", label: "Kitchen Table" },
-    { value: "diningChair", label: "Dining Chair" },
-  ];
+  // const allAdditionalTypes = [
+  //   { value: "chair", label: "Chair" },
+  //   { value: "desk", label: "Desk" },
+  //   { value: "storageCabinet", label: "Storage Cabinet" },
+  //   { value: "bed", label: "Bed" },
+  //   { value: "wardrobe", label: "Wardrobe" },
+  //   { value: "entrywayCloset", label: "Entryway Closet" },
+  //   { value: "sofa", label: "Sofa" },
+  //   { value: "armchair", label: "Armchair" },
+  //   { value: "dresser", label: "Dresser" },
+  //   { value: "bedsideTable", label: "Bedside Table" },
+  //   { value: "kitchenTable", label: "Kitchen Table" },
+  //   { value: "diningChair", label: "Dining Chair" },
+  // ];
 
-  const allowedAdditionalTypes =
-    mainTypeFilter === "office"
-      ? officeAdditionalTypes
-      : mainTypeFilter === "hotelHome"
-      ? hotelHomeAdditionalTypes
-      : allAdditionalTypes;
+  // const allowedAdditionalTypes =
+  //   mainTypeFilter === "office"
+  //     ? officeAdditionalTypes
+  //     : mainTypeFilter === "hotelHome"
+  //     ? hotelHomeAdditionalTypes
+  //     : allAdditionalTypes;
 
-  useEffect(() => {
-    const allowedValues = allowedAdditionalTypes.map((type) => type.value);
-    if (additionalTypeFilter && !allowedValues.includes(additionalTypeFilter)) {
-      setAdditionalTypeFilter("");
-    }
-  }, [mainTypeFilter, additionalTypeFilter, allowedAdditionalTypes]);
+  // useEffect(() => {
+  //   const allowedValues = allowedAdditionalTypes.map((type) => type.value);
+  //   if (additionalTypeFilter && !allowedValues.includes(additionalTypeFilter)) {
+  //     setAdditionalTypeFilter("");
+  //   }
+  // }, [mainTypeFilter, additionalTypeFilter, allowedAdditionalTypes]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,14 +85,14 @@ export default function PricesClient({ data }: PricesClientProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const filteredData = data.filter((item) => {
-    const matchedMainType =
-      mainTypeFilter === "all" || item.mainType === mainTypeFilter;
-    const matchedAdditionalType =
-      additionalTypeFilter === "" ||
-      item.additionalType === additionalTypeFilter;
-    return matchedMainType && matchedAdditionalType;
-  });
+  // const filteredData = data.filter((item) => {
+  //   const matchedMainType =
+  //     mainTypeFilter === "all" || item.mainType === mainTypeFilter;
+  //   const matchedAdditionalType =
+  //     additionalTypeFilter === "" ||
+  //     item.additionalType === additionalTypeFilter;
+  //   return matchedMainType && matchedAdditionalType;
+  // });
 
   return (
     <div className="max-w-5xl mt-20 text-center mx-auto">
@@ -103,8 +103,9 @@ export default function PricesClient({ data }: PricesClientProps) {
         {t("description")}
       </h3>
       {/* Filters Section */}
-      <div className="flex flex-col md:flex-row md:justify-between mb-8 space-y-5 md:space-y-0">
-        {/* Main Type Filter */}
+      {/* Main Type Filter */}
+      {/* <div className="flex flex-col md:flex-row md:justify-between mb-8 space-y-5 md:space-y-0">
+        
         <div className="w-full md:w-auto">
           <h3 className="font-medium text-lg mb-2 md:mb-4">
             Filter by Main Type
@@ -129,10 +130,10 @@ export default function PricesClient({ data }: PricesClientProps) {
               Office
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Additional Type Filter */}
-        <div className="w-full md:w-auto">
+        {/* <div className="w-full md:w-auto">
           <h3 className="font-medium text-lg mb-2">
             Filter by Additional Type
           </h3>
@@ -149,10 +150,10 @@ export default function PricesClient({ data }: PricesClientProps) {
             ))}
           </select>
         </div>
-      </div>
+      </div> */}
       {/* Items Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredData.map((item, index) => (
+        {data.map((item, index) => (
           <div
             key={index}
             className="border rounded-lg p-4 flex flex-col items-center bg-gray-100 dark:bg-gray-800"
