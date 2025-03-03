@@ -14,7 +14,8 @@
     "description2": "žádné počáteční náklady, snadné upgrady a bezproblémová údržba.",
     "benefit1": "Žádné počáteční náklady",
     "benefit2": "Doprava a montáž zdarma",
-    "benefit3": "Možnost zpětného odkupu"
+    "benefit3": "Možnost zpětného odkupu",
+    "priceRent": "Kč/měsíc"
   },
   "explore": {
     "titlePrimary": "Vše",

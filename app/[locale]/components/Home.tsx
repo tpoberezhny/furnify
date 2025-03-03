@@ -37,33 +37,29 @@ export default function Home() {
       id: 1,
       top: "28%",
       left: "7.2%",
-      type: "Armchair1",
-      title: "Ekenaset - IKEA",
-      priceRent: "415 Kč/month",
+      title: "The Board",
+      priceRent: "590",
     },
     {
       id: 2,
       top: "51.5%",
       left: "16.5%",
-      type: "Chair2",
-      title: "AlzaErgo Chair Wave 1",
-      priceRent: "415 Kč/month",
+      title: "Flexi Table",
+      priceRent: "535",
     },
     {
       id: 3,
       top: "59%",
       left: "32.2%",
-      type: "Desk3",
-      title: "AlzaErgo ET5 AiO Essential",
-      priceRent: "415 Kč/month",
+      title: "Ergo Chair",
+      priceRent: "690",
     },
     {
       id: 4,
       top: "59.5%",
       left: "48.7%",
-      type: "Bed4",
-      title: "Brimnes - IKEA",
-      priceRent: "725 Kč/month",
+      title: "X Container",
+      priceRent: "255",
     },
   ];
 
@@ -118,14 +114,11 @@ export default function Home() {
               {/* Tooltip/modal that appears under the circle */}
               {activeHover === circle.id && (
                 <div className="absolute md:top-full top-1/3 left-1/2 transform -translate-x-1/2 mt-2 md:py-1 bg-gray-50 rounded z-[51]">
-                  <p className="mainImageType text-center mb-[-5px] md:mb-0 dark:invert">
-                    {circle.type}
-                  </p>
                   <p className="mainImageTitle text-center md:p-1 md:mb-0 w-full dark:invert">
                     {circle.title}
                   </p>
                   <p className="mainImagePrices text-center dark:invert">
-                    {circle.priceRent}
+                    {circle.priceRent} {t("priceRent")}
                   </p>
                 </div>
               )}

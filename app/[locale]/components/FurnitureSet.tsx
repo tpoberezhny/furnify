@@ -56,7 +56,7 @@ export default function FurnitureSets() {
             className="rounded-xl"
           />
           <div
-            className={`absolute inset-0 flex flex-col items-center justify-center bg-gray-700 bg-opacity-75 text-white rounded-xl transition-opacity duration-300 ${
+            className={`absolute inset-0 flex flex-col items-center justify-center bg-gray-500 bg-opacity-65 text-white rounded-xl transition-opacity duration-300 ${
               activeId === furnitureSet.id
                 ? "opacity-100"
                 : "opacity-0 group-hover:opacity-100"
