@@ -15,9 +15,9 @@ export default async function WeAreEco() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Text Card */}
-          <div className="flex items-center justify-center md:h-96 p-2 text-center md:text-left md:p-6 rounded-xl dark:shadow-gray-700 shadow-xl transform hover:scale-105 transition duration-300 ease-out">
+          <div className="flex items-center justify-center md:h-96 p-2 md:text-left md:p-6 rounded-xl dark:shadow-gray-700 shadow-xl transform hover:scale-105 transition duration-300 ease-out">
             <div className="max-w-lg">
-              <p className="text-gray-700 dark:text-gray-200 text-lg">
+              <p className="text-gray-700 dark:text-gray-200 text-lg text-justify">
                 {t("description")}
               </p>
             </div>

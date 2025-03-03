@@ -12,6 +12,9 @@ export default {
 			fontFamily: {
 				montserrat: ['var(--font-montserrat)', 'sans-serif'],
 			},
+			textAlign: {
+				justify: "justify",
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
