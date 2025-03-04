@@ -71,7 +71,7 @@ export default function FurnitureSets() {
             <Image
               src={furnitureSet.image}
               alt={furnitureSet.name}
-              width={350}
+              width={400}
               height={250}
               className="rounded-t-xl"
             />
