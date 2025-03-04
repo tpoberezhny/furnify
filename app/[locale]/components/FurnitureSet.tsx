@@ -96,12 +96,12 @@ export default function FurnitureSets() {
               </div>
             </div>
           </div>
-          {/* Bottom cost section: Always visible, not affected by hover */}
-          <div className="flex justify-center gap-1">
-            <span className="bg-primary text-white px-3 py-1 rounded-bl-xl rounded-br-xl text-sm">
+          {/* Bottom cost section*/}
+          <div className="flex justify-between gap-2">
+            <span className="bg-primary text-white px-5 md:px-3 py-2 md:py-1 rounded-bl-xl rounded-br-xl text-sm">
               {t("rent")} {furnitureSet.rentalCost} {t("rentPrice")}
             </span>
-            <span className="bg-orange-500 text-white px-3 py-1 rounded-bl-xl rounded-br-xl text-sm">
+            <span className="bg-orange-500 text-white px-5 md:px-3 py-2 md:py-1 rounded-bl-xl rounded-br-xl text-sm">
               {t("buy")} {furnitureSet.fullCost} {t("fullPrice")}
             </span>
           </div>
