@@ -38,10 +38,10 @@
     "3stepDescription": "You will receive a subscription offer from us. Now you have furniture for which you pay a small amount monthly."
   },
   "furnitureSets": {
-    "rent": "Rent Price:",
+    "rent": "Subscription:",
     "rentPrice": "CZK/month",
     "fullPrice": "CZK",
-    "buy": "Buy Price:",
+    "buy": "Buy:",
     "includes": {
       "chair": "Chair",
       "table": "Table",

@@ -26,7 +26,7 @@ export default async function WeAreEco() {
           </div>
 
           {/* Text Card */}
-          <div className="shadow-lg p-4 md:p-8 rounded-xl bg-gray-200">
+          <div className="shadow-lg p-4 md:p-8 rounded-xl">
             <div className="flex flex-col justify-center">
               <p className="text-gray-700 dark:text-gray-200 text-justify font-montserrat text-base md:text-xl dark:invert">
                 {t("description")}

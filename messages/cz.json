@@ -38,10 +38,10 @@
     "3stepDescription": "Dostanete od nás nabídku na předplatné. Nyní máte nábytek, za který platíte jenom malou částku měsíčně."
   },
   "furnitureSets": {
-    "rent": "Cena pronajmu:",
+    "rent": "Pronajem:",
     "rentPrice": "Kč/měsíc",
     "fullPrice": "Kč",
-    "buy": "Plná cena:",
+    "buy": "Koupit:",
     "includes": {
       "chair": "Židle",
       "table": "Stůl",

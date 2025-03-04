@@ -85,9 +85,9 @@ export default function FurnitureSets() {
               {/* Top overlay: Name and what's included */}
               <div className="flex flex-col items-center pt-4">
                 <h3 className="text-4xl font-bold">{furnitureSet.name}</h3>
+                <h4 className="text-sm">Set</h4>
                 {furnitureSet.whatIncludes && (
                   <p className="text-base mt-6">
-                    {t("whatIncludes")}{" "}
                     {furnitureSet.whatIncludes
                       .map((item) => `${item.quantity} ${t(item.key)}`)
                       .join(", ")}
