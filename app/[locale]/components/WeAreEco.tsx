@@ -13,24 +13,25 @@ export default async function WeAreEco() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Text Card */}
-          <div className="flex items-center justify-center md:h-96 p-2 md:text-left md:p-6 rounded-xl dark:shadow-gray-700 shadow-xl transform hover:scale-105 transition duration-300 ease-out">
-            <div className="max-w-lg">
-              <p className="text-gray-700 dark:text-gray-200 text-lg text-justify">
-                {t("description")}
-              </p>
-            </div>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Card */}
-          <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-out">
+          <div className="relative w-full h-[400px] md:h-[500px] bg-transparent">
             <Image
               src="/assets/eco.jpg"
               alt="eco"
               layout="fill"
               objectFit="cover"
+              className="rounded-xl "
             />
+          </div>
+
+          {/* Text Card */}
+          <div className="shadow-lg p-4 md:p-8 rounded-xl bg-gray-200">
+            <div className="flex flex-col justify-center">
+              <p className="text-gray-700 dark:text-gray-200 text-justify font-montserrat text-base md:text-xl">
+                {t("description")}
+              </p>
+            </div>
           </div>
         </div>
       </div>
