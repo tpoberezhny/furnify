@@ -6,7 +6,7 @@ export default async function HowItWorks() {
   return (
     <div
       id="howItWorks"
-      className="mt-10 lg:mt-20 text-center max-w-6xl mx-auto scroll-mt-20"
+      className="mt-10 lg:mt-20 text-center max-w-6xl mx-auto scroll-mt-20 px-4"
     >
       <div>
         <h1 className="title leading-[2rem] lg:leading-[3.3rem]">

@@ -23,24 +23,27 @@ export default async function Explore() {
   const data: carusel[] = await getCaruselData();
 
   return (
-    <div
-      className="relative mt-10 lg:mt-20 text-center scroll-mt-20"
-      id="furniture"
-    >
-      <h1 className="title">
-        <span className="text-primary">{t("titlePrimary")}</span> {t("title1")}
-        <br />
-        {t("title2")}
-      </h1>
-      <h3 className="description-text customTopMargin dark:invert">
-        {t("description1")}
-        <br className="hidden md:block" /> {t("description2")}
-      </h3>
-      <FurnitureSets />
-      <div className="text-center customTopMargin">
-        <h2 className="description-text dark:invert">{t("eshop")}</h2>
+    <div>
+      <div
+        className="relative mt-10 lg:mt-20 text-center scroll-mt-20 px-4"
+        id="furniture"
+      >
+        <h1 className="title">
+          <span className="text-primary">{t("titlePrimary")}</span>{" "}
+          {t("title1")}
+          <br />
+          {t("title2")}
+        </h1>
+        <h3 className="description-text customTopMargin dark:invert">
+          {t("description1")}
+          <br className="hidden md:block" /> {t("description2")}
+        </h3>
+        <FurnitureSets />
+        <div className="text-center customTopMargin">
+          <h2 className="description-text dark:invert">{t("eshop")}</h2>
+        </div>
+        <EshopBtn />
       </div>
-      <EshopBtn />
       <SwiperComponent data={data} />
     </div>
   );

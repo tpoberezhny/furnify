@@ -41,7 +41,7 @@ export default async function RootLayout(props: {
         <ClientProviders>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <NavBar />
-            <main className="max-w-8xl mx-auto px-4 py-5">
+            <main className="max-w-8xl mx-auto  py-5">
               {props.children}
               <Analytics />
             </main>

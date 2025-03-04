@@ -5,7 +5,7 @@ export default async function WeAreEco() {
   const t = await getTranslations("eco");
 
   return (
-    <section id="benefits" className="relative py-16 lg:py-24">
+    <section id="benefits" className="relative py-16 lg:py-24 px-4">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-6 md:mb-12">
           <h1 className="title leading-[1.2]">
