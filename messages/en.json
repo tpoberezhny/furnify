@@ -41,7 +41,13 @@
     "rent": "Rent Price:",
     "rentPrice": "CZK/month",
     "fullPrice": "CZK",
-    "buy": "Buy Price:" 
+    "buy": "Buy Price:",
+    "includes": {
+      "chair": "Chair",
+      "table": "Table",
+      "cabinet": "Cabinet"
+    },
+    "whatIncludes": "Contain: "
   },
   "eshop": {
     "description": "Contact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers if you can't find exactly what suits you in our store."

@@ -7,11 +7,11 @@ import WeAreEco from "./components/WeAreEco";
 export default function Furnify() {
   return (
     <>
-    <Home />
+    {/* <Home /> */}
     <Explore />
-    <HowItWorks />
+    {/* <HowItWorks />
     <WeAreEco />
-    <Faq />
+    <Faq /> */}
     </>
   )
 } 
