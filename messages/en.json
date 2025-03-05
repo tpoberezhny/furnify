@@ -15,7 +15,15 @@
     "benefit1": "No Upfront costs",
     "benefit2": "Free Delivery & Assembly",
     "benefit3": "Purchase with buyback",
-    "priceRent": "CZK/month"
+    "priceRent": "CZK/month",
+    "calculate": "Calculate the Price"
+  },
+  "calculator": {
+    "title": "Compare the Cost",
+    "czk": "CZK",
+    "rent": "Subscription:",
+    "coworking": "Coworking:",
+    "numberOfPeople": "Number of people"
   },
   "explore": {
     "titlePrimary": "Everything",

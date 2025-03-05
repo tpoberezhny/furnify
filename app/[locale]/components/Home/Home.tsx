@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { TypeWriter } from "@lib/interface";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import Calculator from "./Calculator";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -19,6 +20,7 @@ export default function Home() {
 
   const [activeHover, setActiveHover] = useState<number | null>(null);
   const [isHoveredEnabled, setIsHoveredEnabled] = useState(false);
+  const [showCalculator, setShowCalculator] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -88,6 +90,14 @@ export default function Home() {
             className="object-cover rounded-xl mx-auto md:mt-0 md:[mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_40%,rgba(0,0,0,1)_100%)]"
             priority
           />
+          <div className="absolute top-5 md:top-20 right-2 md:right-8 z-1">
+            <button
+              onClick={() => setShowCalculator(true)}
+              className="bg-primary text-white px-4 py-2 rounded-xl shadow text-sm md:text-xl animate-pulseShort"
+            >
+              {t("calculate")}
+            </button>
+          </div>
 
           {/* Interactive Circles */}
           {interactiveCircles.map((circle) => (
@@ -131,6 +141,9 @@ export default function Home() {
         <h2 className="benefits-description">{t("benefit2")}</h2> |
         <h2 className="benefits-description">{t("benefit3")}</h2>
       </div>
+      {showCalculator && (
+        <Calculator onClose={() => setShowCalculator(false)} />
+      )}
     </div>
   );
 }

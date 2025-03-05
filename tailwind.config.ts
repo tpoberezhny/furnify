@@ -15,6 +15,9 @@ export default {
 			textAlign: {
 				justify: "justify",
 			},
+			animation: {
+				'pulseShort': 'pulse 1.4s ease-in-out 4',
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

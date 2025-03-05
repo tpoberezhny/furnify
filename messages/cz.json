@@ -15,7 +15,15 @@
     "benefit1": "Žádné počáteční náklady",
     "benefit2": "Doprava a montáž zdarma",
     "benefit3": "Možnost zpětného odkupu",
-    "priceRent": "Kč/měsíc"
+    "priceRent": "Kč/měsíc",
+    "calculate": "Spočítejte Cenu"
+  },
+  "calculator": {
+    "title": "Porovnejte náklady",
+    "czk": "Kč",
+    "rent": "Předplatné:",
+    "coworking": "Coworking:",
+    "numberOfPeople": "Počet Lidí:"
   },
   "explore": {
     "titlePrimary": "Vše",
