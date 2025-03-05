@@ -2,7 +2,7 @@ import { client } from "@lib/sanity";
 import { carusel } from "@lib/interface";
 import SwiperComponent from "./SwiperComponent";
 import { getTranslations } from "next-intl/server";
-import EshopBtn from "./EshopBtn";
+import EshopBtn from "../Eshop/EshopBtn";
 import FurnitureSets from "./FurnitureSet";
 
 export const revalidate = 60;

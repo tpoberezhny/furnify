@@ -89,7 +89,7 @@ export default function FurnitureSets() {
                 {furnitureSet.whatIncludes && (
                   <p className="text-base mt-6">
                     {furnitureSet.whatIncludes
-                      .map((item) => `${item.quantity} ${t(item.key)}`)
+                      .map((item) => `${t(item.key)}`)
                       .join(", ")}
                   </p>
                 )}
