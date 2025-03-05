@@ -36,7 +36,7 @@ export default function Calculator({ onClose }: CalculatorProps) {
             min="1"
             max="200"
             value={numPeople}
-            onChange={(e) => setNumPeople(parseInt(e.target.value) || 3)}
+            onChange={(e) => setNumPeople(parseInt(e.target.value) || 1)}
             className="w-full border rounded px-3 py-2 text-center dark:invert"
           />
         </div>
