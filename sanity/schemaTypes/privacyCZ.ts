@@ -1,9 +1,9 @@
 import {Rule} from 'sanity'
 
 export default {
-  name: 'terms',
+  name: 'privacyCZ',
   type: 'document',
-  title: 'Terms',
+  title: 'PrivacyCZ',
   fields: [
     {
       name: 'title',
@@ -23,7 +23,7 @@ export default {
       name: 'content',
       type: 'array',
       title: 'Content',
-      description: 'Main content for the Terms page',
+      description: 'Main content for the Privacy page',
       of: [
         {
           type: 'block',

@@ -1,4 +1,4 @@
-import {Rule} from 'sanity';
+import {Rule} from 'sanity'
 
 export default {
   name: 'privacy',
@@ -17,7 +17,7 @@ export default {
       title: 'Slug',
       options: {
         source: 'title',
-      }
+      },
     },
     {
       name: 'content',
@@ -26,10 +26,9 @@ export default {
       description: 'Main content for the Privacy page',
       of: [
         {
-          type: 'block'
-        }
-      ]
-    }
-  ]
-
+          type: 'block',
+        },
+      ],
+    },
+  ],
 }

@@ -10,11 +10,14 @@ interface PrivacyData {
   content: PortableTextBlock[];
 }
 
-export default async function PrivacyPage(/**{params}: {params: {locale: string}}*/) {
-  // const documentType = params.locale === "cz" ? "privacyCz" : "privacyEn";
-  /**Then pass docum,entType to groq (privacy) */
+export default async function PrivacyPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const documentType = params.locale === "cz" ? "privacyCZ" : "privacy";
   const query = groq`
-    *[_type == "privacy"][0]{
+    *[_type == "${documentType}"][0]{
       title,
       content
     }

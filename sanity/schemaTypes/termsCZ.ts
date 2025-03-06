@@ -1,9 +1,9 @@
 import {Rule} from 'sanity'
 
 export default {
-  name: 'terms',
+  name: 'termsCZ',
   type: 'document',
-  title: 'Terms',
+  title: 'TermsCZ',
   fields: [
     {
       name: 'title',
