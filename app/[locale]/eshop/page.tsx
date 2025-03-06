@@ -25,7 +25,7 @@ async function getData(props: PageProps): Promise<itemProps[]> {
 }
 
 export default async function Prices({ params }: PageProps): Promise<JSX.Element> {
-  const { locale } = await params;
+  
   const data = await getData({ params });
   return <PricesClient data={data} />;
 }
