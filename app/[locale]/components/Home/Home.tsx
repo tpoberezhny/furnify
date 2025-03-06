@@ -20,7 +20,9 @@ export default function Home() {
 
   const [activeHover, setActiveHover] = useState<number | null>(null);
   const [isHoveredEnabled, setIsHoveredEnabled] = useState(false);
-  const [showCalculator, setShowCalculator] = useState(false);
+  const [showCalculator, setShowCalculator] = useState<boolean>(() =>
+    typeof window !== "undefined" ? window.innerWidth >= 768 : false
+  );
 
   useEffect(() => {
     if (typeof window !== "undefined") {
