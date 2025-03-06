@@ -47,7 +47,7 @@ export default function NavBar() {
       <div className="py-4">
         <div className="px-4 flex items-center justify-between max-w-6xl mx-auto">
           {/* Logo */}
-          <Link href="/">
+          <Link href={`/${currentLocale}/`}>
             <Image
               src={logoSrc}
               alt="Logo"
