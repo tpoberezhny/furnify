@@ -15,8 +15,7 @@ export default async function TermsPage({
 }: {
   params: { locale: string };
 }): Promise<JSX.Element> {
-  const resolvedParams = await Promise.resolve(params);
-  const locale = resolvedParams.locale;
+  const { locale } = await (params as unknown as Promise<{ locale: string }>);
   const documentType = locale === "cz" ? "termsCZ" : "terms";
   const query = groq`
     *[_type == "${documentType}"][0]{

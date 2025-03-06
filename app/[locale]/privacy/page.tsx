@@ -15,8 +15,8 @@ export default async function PrivacyPage({
 }: {
   params: { locale: string };
 }): Promise<JSX.Element> {
-  const resolvedParams = await Promise.resolve(params);
-  const locale = resolvedParams.locale;
+  // Cast params as unknown then as a Promise so that we can await it
+  const { locale } = await (params as unknown as Promise<{ locale: string }>);
   const documentType = locale === "cz" ? "privacyCZ" : "privacy";
   const query = groq`
     *[_type == "${documentType}"][0]{
@@ -30,7 +30,7 @@ export default async function PrivacyPage({
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">
       <article className="prose lg:prose-xl dark:invert mt-16">
-        <h1 className="">{privacy.title}</h1>
+        <h1 className="text-center">{privacy.title}</h1>
         <PortableText value={privacy.content} />
       </article>
     </main>
