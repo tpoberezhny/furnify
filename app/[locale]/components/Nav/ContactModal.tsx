@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ContactModalProps {
   onClose: () => void;
 }
 
 export default function ContactModal({ onClose }: ContactModalProps) {
+  const t = useTranslations("contactModal");
   const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -88,8 +90,8 @@ export default function ContactModal({ onClose }: ContactModalProps) {
         >
           <X className="w-5 h-5" />
         </button>
-        <h2 className="text-2xl font-semibold mb-1">Get in Touch</h2>
-        <h1 className="text-lg mb-4">Let&apos;s chat, reach out to Us</h1>
+        <h2 className="text-2xl font-semibold mb-3">{t("title")}</h2>
+        <h1 className="text-lg mb-4">{t("description")}</h1>
         {notification && (
           <div
             className={`p-2 mb-4 border rounded ${

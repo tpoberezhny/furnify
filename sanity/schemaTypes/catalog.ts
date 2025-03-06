@@ -48,42 +48,42 @@ export default {
       title: 'Rent Price',
       validation: (Rule: Rule) => Rule.required().min(0)
     },
-    {
-      name: 'mainType',
-      type: 'string',
-      title: 'Item Main Type',
-      options: {
-        list: [
-          {title: 'Office', value: 'office'},
-          {title: 'Hotel & Home', value: 'hotelHome'}
-        ],
-        layout: 'radio'
-      },
-      validation: (Rule: Rule) => Rule.required()
-    },
-    {
-      name: 'additionalType',
-      type: 'string',
-      title: 'Item Additional Type',
-      options: {
-        list: [
-          {title: "Chair", value: 'chair'},
-          {title: "Desk", value: 'desk'},
-          {title: 'Storage Cabinet', value: 'storageCabinet'},
-          {title: 'Bed', value: 'bed'},
-          {title: 'Wardrobe', value: 'wardrobe'},
-          {title: 'Entryway Closet', value: 'entrywayCloset'},
-          {title: 'Sofa', value: 'sofa'},
-          {title: 'Armchair', value: 'armchair'},
-          {title: 'Dresser', value: 'dresser'},
-          {title: 'Bedside Table', value: 'bedsideTable'},
-          {title: 'Kitchen Table', value: 'kitchenTable'},
-          {title: 'Dining Chair', value: 'diningChair'}
-        ],
-        layout: 'dropdown',
-      },
-      validation: (Rule: Rule) => Rule.required() 
-    },
+    // {
+    //   name: 'mainType',
+    //   type: 'string',
+    //   title: 'Item Main Type',
+    //   options: {
+    //     list: [
+    //       {title: 'Office', value: 'office'},
+    //       {title: 'Hotel & Home', value: 'hotelHome'}
+    //     ],
+    //     layout: 'radio'
+    //   },
+    //   validation: (Rule: Rule) => Rule.required()
+    // },
+    // {
+    //   name: 'additionalType',
+    //   type: 'string',
+    //   title: 'Item Additional Type',
+    //   options: {
+    //     list: [
+    //       {title: "Chair", value: 'chair'},
+    //       {title: "Desk", value: 'desk'},
+    //       {title: 'Storage Cabinet', value: 'storageCabinet'},
+    //       {title: 'Bed', value: 'bed'},
+    //       {title: 'Wardrobe', value: 'wardrobe'},
+    //       {title: 'Entryway Closet', value: 'entrywayCloset'},
+    //       {title: 'Sofa', value: 'sofa'},
+    //       {title: 'Armchair', value: 'armchair'},
+    //       {title: 'Dresser', value: 'dresser'},
+    //       {title: 'Bedside Table', value: 'bedsideTable'},
+    //       {title: 'Kitchen Table', value: 'kitchenTable'},
+    //       {title: 'Dining Chair', value: 'diningChair'}
+    //     ],
+    //     layout: 'dropdown',
+    //   },
+    //   validation: (Rule: Rule) => Rule.required() 
+    // },
     {
       name: 'content',
       type: 'array',

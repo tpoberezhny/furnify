@@ -57,17 +57,17 @@ export default function PricesClient({ data }: PricesClientProps) {
                 className="object-contain rounded-md w-full h-full"
               />
             </div>
-            <div className="mt-4 text-center">
+            <div className="mt-4 text-center w-full">
               <h4 className="text-xl font-semibold leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center prices">
                 {item.title}
               </h4>
-              <div className="text-sm justify-center items-center flex h-[110px] md:h-[140px] font-montserrat ">
+              <div className="text-sm justify-center items-center text-left flex h-[110px] md:h-[140px] font-montserrat ">
                 <PortableText value={item.content ?? []} />
               </div>
-              <p className="text-white mt-2 prices bg-primary rounded-xl">
+              <p className="text-white mt-2 prices bg-primary rounded-xl w-[95%] mx-auto">
                 {item.rentPrice} {t("rent")}
               </p>
-              <p className="text-white mt-2 prices bg-orange-500 rounded-xl">
+              <p className="text-white mt-2 prices bg-orange-500 rounded-xl w-[95%] mx-auto">
                 {item.price} {t("czk")}
               </p>
             </div>

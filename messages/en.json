@@ -16,14 +16,15 @@
     "benefit2": "Free Delivery & Assembly",
     "benefit3": "Purchase with buyback",
     "priceRent": "CZK/month",
-    "calculate": "Calculate the Price"
+    "calculate": "Calculate Furnify vs Coworking"
   },
   "calculator": {
-    "title": "Compare the Cost",
+    "title": "Compare prices",
+    "description": "Renting office space + Furnify vs Coworking",
     "czk": "CZK",
-    "rent": "Subscription:",
+    "rent": "Furnify:",
     "coworking": "Coworking:",
-    "numberOfPeople": "Number of people"
+    "numberOfPeople": "How many people are in your team?"
   },
   "explore": {
     "titlePrimary": "Everything",
@@ -89,5 +90,9 @@
     "privacy": "Privacy Policy",
     "reserved": "All rights reserved.",
     "contact": "Contact Us"
+  },
+  "contactModal": {
+    "title": "Want to subscribe, buy or ask question?",
+    "description": "Fill out the form and we will respond within 3 business hours."
   }
 }

@@ -16,14 +16,15 @@
     "benefit2": "Doprava a montáž zdarma",
     "benefit3": "Možnost zpětného odkupu",
     "priceRent": "Kč/měsíc",
-    "calculate": "Spočítejte Cenu"
+    "calculate": "Spočítat Furnify vs Coworking"
   },
   "calculator": {
-    "title": "Porovnejte náklady",
+    "title": "Porovnejte ceny",
+    "description": "Pronájem kancelářského prostoru + Furnify vs Coworking",
     "czk": "Kč",
-    "rent": "Předplatné:",
+    "rent": "Furnify:",
     "coworking": "Coworking:",
-    "numberOfPeople": "Počet Lidí:"
+    "numberOfPeople": "Kolik lidí je ve vašem týmu?"
   },
   "explore": {
     "titlePrimary": "Vše",
@@ -89,5 +90,9 @@
     "privacy": "Ochrana osobních údajů",
     "reserved": "Všechna práva vyhrazena.",
     "contact": "Kontaktujte nás"
+  },
+  "contactModal": {
+    "title": "Chcete pronajmout nábytek, koupit nebo se na něco zeptat?",
+    "description": "Vyplňte formulář a my vám odpovíme do 3 pracovních hodin"
   }
 }
