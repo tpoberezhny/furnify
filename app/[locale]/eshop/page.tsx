@@ -4,9 +4,12 @@ import type { itemProps } from "@lib/interface";
 
 export const revalidate = 60;
 
-async function getData(props: {
-  params: { locale: string };
-}): Promise<itemProps[]> {
+// Define a type for your page props with params as a Promise.
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+async function getData(props: PageProps): Promise<itemProps[]> {
   const { locale } = await props.params;
   const documentType = locale === "cz" ? "furnifyCZ" : "furnify";
   const query = `*[_type == "${documentType}"] | order(rentPrice asc) {
@@ -21,11 +24,8 @@ async function getData(props: {
   return data;
 }
 
-export default async function Prices({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<JSX.Element> {
+export default async function Prices({ params }: PageProps): Promise<JSX.Element> {
+  const { locale } = await params;
   const data = await getData({ params });
   return <PricesClient data={data} />;
 }
