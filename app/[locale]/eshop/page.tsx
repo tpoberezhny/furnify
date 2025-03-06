@@ -6,11 +6,10 @@ export const revalidate = 60;
 async function getData() {
   const query = `*[_type == "furnify"] | order(rentPrice asc) {
     title,
-    brand,
     titleImage,
     rentPrice,
-    mainType,
-    additionalType
+    price,
+    content,
   }`;
 
   const data = await client.fetch(query);

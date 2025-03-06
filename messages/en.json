@@ -58,7 +58,9 @@
     "whatIncludes": "Contain: "
   },
   "eshop": {
-    "description": "Contact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers if you can't find exactly what suits you in our store."
+    "description": "Contact us to purchase furniture, and we can also create a personalized solution for you from furniture by more than 20 manufacturers if you can't find exactly what suits you in our store.",
+    "czk": "CZK",
+    "rent": "CZK/month"
   },
   "eco": {
     "title1": "Environmental",

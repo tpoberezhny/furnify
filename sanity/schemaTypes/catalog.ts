@@ -93,7 +93,6 @@ export default {
           type: 'block',
         }
       ]
-      //Content for the future Single Item Page description (No needed for now)
     }
   ]
 }

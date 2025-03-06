@@ -1,5 +1,5 @@
 import { ImageUrlBuilderOptions } from "@sanity/image-url/lib/types/types";
-import React from "react";
+import type { PortableTextBlock } from "@portabletext/react";
 
 export interface carusel {
   title: string;
@@ -17,11 +17,14 @@ export interface TypeWriter {
 
 export interface itemProps {
   title: string;
-  brand: string;
+  brand?: string;
   titleImage: ImageUrlBuilderOptions;
   rentPrice: number;
-  mainType: string;
-  additionalType: string;
+  mainType?: string;
+  additionalType?: string;
+  content?: PortableTextBlock[];
+  price: number;
+  description?: string[];
 }
 
 export interface BenefitCardProps {

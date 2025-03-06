@@ -7,6 +7,7 @@ import Image from "next/image";
 import { itemProps } from "@lib/interface";
 import { urlFor } from "@lib/sanity";
 import { useTranslations } from "next-intl";
+import { PortableText } from "@portabletext/react";
 
 interface PricesClientProps {
   data: itemProps[];
@@ -34,7 +35,7 @@ export default function PricesClient({ data }: PricesClientProps) {
   };
 
   return (
-    <div className="max-w-5xl mt-20 text-center mx-auto">
+    <div className="max-w-5xl mt-20 text-center mx-auto px-4">
       <h1 className="title mb-8">
         <span className="text-primary">E</span>-Shop
       </h1>
@@ -57,14 +58,17 @@ export default function PricesClient({ data }: PricesClientProps) {
               />
             </div>
             <div className="mt-4 text-center">
-              <h4 className="text-md leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center prices">
+              <h4 className="text-xl font-semibold leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center prices">
                 {item.title}
               </h4>
-              <h4 className="font-sm text-sm underline mt-1 prices">
-                {item.brand}
-              </h4>
-              <p className="text-gray-500 mt-2 prices">
-                {item.rentPrice} Kč / month
+              <div className="text-sm justify-center items-center flex h-[110px] md:h-[140px] font-montserrat ">
+                <PortableText value={item.content ?? []} />
+              </div>
+              <p className="text-white mt-2 prices bg-primary rounded-xl">
+                {item.rentPrice} {t("rent")}
+              </p>
+              <p className="text-white mt-2 prices bg-orange-500 rounded-xl">
+                {item.price} {t("czk")}
               </p>
             </div>
           </div>

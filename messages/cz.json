@@ -58,7 +58,9 @@
     "whatIncludes": "Zahrnuje: "
   },
   "eshop": {
-    "description": "Kontaktujte nás pro nákup nábytku, a pokud v našem obchodě nenajdete přesně to, co vám vyhovuje, můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců."
+    "description": "Kontaktujte nás pro nákup nábytku, a pokud v našem obchodě nenajdete přesně to, co vám vyhovuje, můžeme pro vás vytvořit personalizované řešení z nábytku více než 20 výrobců.",
+    "czk": "Kč",
+    "rent": "Kč/měsíc"
   },
   "eco": {
     "title1": "Ekologická",
