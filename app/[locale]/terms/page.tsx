@@ -10,12 +10,14 @@ interface TermsData {
   content: PortableTextBlock[];
 }
 
-export default async function TermsPage({
-  params,
-}: {
-  params: { locale: string };
+// Define a type for the asynchronous params:
+type tParams = Promise<{ locale: string }>;
+
+export default async function TermsPage(props: {
+  params: tParams;
 }): Promise<JSX.Element> {
-  const { locale } = await (params as unknown as Promise<{ locale: string }>);
+  // Await the params to get the locale.
+  const { locale } = await props.params;
   const documentType = locale === "cz" ? "termsCZ" : "terms";
   const query = groq`
     *[_type == "${documentType}"][0]{
@@ -28,7 +30,7 @@ export default async function TermsPage({
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">
-      <article className="prose lg:prose-xl mt-16 dark:invert">
+      <article className="prose lg:prose-xl dark:invert mt-16">
         <h1 className="text-center">{terms.title}</h1>
         <PortableText value={terms.content} />
       </article>

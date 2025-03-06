@@ -10,13 +10,14 @@ interface PrivacyData {
   content: PortableTextBlock[];
 }
 
-export default async function PrivacyPage({
-  params,
-}: {
-  params: { locale: string };
+// Define a type for the asynchronous params:
+type tParams = Promise<{ locale: string }>;
+
+export default async function PrivacyPage(props: {
+  params: tParams;
 }): Promise<JSX.Element> {
-  // Cast params as unknown then as a Promise so that we can await it
-  const { locale } = await (params as unknown as Promise<{ locale: string }>);
+  // Await the params to get the locale.
+  const { locale } = await props.params;
   const documentType = locale === "cz" ? "privacyCZ" : "privacy";
   const query = groq`
     *[_type == "${documentType}"][0]{
