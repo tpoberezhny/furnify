@@ -14,8 +14,10 @@ export default async function PrivacyPage({
   params,
 }: {
   params: { locale: string };
-}) {
-  const documentType = params.locale === "cz" ? "privacyCZ" : "privacy";
+}): Promise<JSX.Element> {
+  const resolvedParams = await Promise.resolve(params);
+  const locale = resolvedParams.locale;
+  const documentType = locale === "cz" ? "privacyCZ" : "privacy";
   const query = groq`
     *[_type == "${documentType}"][0]{
       title,
