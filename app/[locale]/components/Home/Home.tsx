@@ -138,10 +138,18 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="mt-6 flex flex-row justify-center gap-2 max-w-4xl items-center mx-auto py-3">
-        <h2 className="benefits-description">{t("benefit1")}</h2> |
-        <h2 className="benefits-description">{t("benefit2")}</h2> |
-        <h2 className="benefits-description">{t("benefit3")}</h2>
+      <div className="mt-6 flex flex-row justify-center gap-1 md:gap-2 max-w-4xl items-center mx-auto py-3">
+        <h2 className="benefits-description bg-primary py-2 px-2 rounded-xl text-white">
+          {t("benefit1")}
+        </h2>{" "}
+        |
+        <h2 className="benefits-description bg-primary py-2 px-2 rounded-xl text-white">
+          {t("benefit2")}
+        </h2>{" "}
+        |
+        <h2 className="benefits-description bg-primary py-2 px-2 rounded-xl text-white">
+          {t("benefit3")}
+        </h2>
       </div>
       {showCalculator && (
         <Calculator onClose={() => setShowCalculator(false)} />

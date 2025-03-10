@@ -61,7 +61,7 @@ export default function PricesClient({ data }: PricesClientProps) {
               <h4 className="text-xl font-semibold leading-6 h-[24px] md:h-[48px] flex items-center justify-center text-center prices">
                 {item.title}
               </h4>
-              <div className="text-sm items-center text-left flex h-[110px] md:h-[140px] font-montserrat w-[95%] mx-auto">
+              <div className="text-sm items-center text-left flex h-[110px] md:h-[140px] font-montserrat w-[95%] md:w-[100%] mx-auto">
                 <PortableText value={item.content ?? []} />
               </div>
               <p className="text-white mt-2 prices bg-primary rounded-xl w-[95%] mx-auto">
