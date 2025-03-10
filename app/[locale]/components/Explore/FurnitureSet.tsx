@@ -98,11 +98,15 @@ export default function FurnitureSets() {
           </div>
           {/* Bottom cost section*/}
           <div className="flex justify-between gap-2">
-            <span className="bg-primary text-white px-5 md:px-3 py-2 md:py-1 rounded-bl-xl rounded-br-xl text-sm">
-              {t("rent")} {furnitureSet.rentalCost} {t("rentPrice")}
+            <span className="bg-primary text-white px-5 md:px-1 lg:px-3 py-2 md:py-1 rounded-bl-xl rounded-br-xl text-sm w-[70%]">
+              {t("rent")}
+              <br />
+              {furnitureSet.rentalCost} {t("rentPrice")}
             </span>
-            <span className="bg-orange-500 text-white px-5 md:px-3 py-2 md:py-1 rounded-bl-xl rounded-br-xl text-sm">
-              {t("buy")} {furnitureSet.fullCost} {t("fullPrice")}
+            <span className="bg-orange-500 text-white px-5 md:px-2 lg:px-3 py-2 md:py-1 rounded-bl-xl rounded-br-xl text-sm w-[50%]">
+              {t("buy")}
+              <br />
+              {furnitureSet.fullCost} {t("fullPrice")}
             </span>
           </div>
         </div>

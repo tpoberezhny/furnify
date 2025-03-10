@@ -117,7 +117,8 @@ export default function ContactModal({ onClose }: ContactModalProps) {
               className="peer contactInput"
             />
             <label htmlFor="name" className="contactLabel">
-              Name<span className="text-red-500 ml-1">*</span>
+              {t("name")}
+              <span className="text-red-500 ml-1">*</span>
             </label>
           </div>
 
@@ -133,7 +134,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
               className="peer contactInput"
             />
             <label htmlFor="company" className="contactLabel">
-              Company Name
+              {t("companyName")}
             </label>
           </div>
 
@@ -150,7 +151,8 @@ export default function ContactModal({ onClose }: ContactModalProps) {
               className="peer contactInput"
             />
             <label htmlFor="email" className="contactLabel">
-              Email<span className="text-red-500 ml-1">*</span>
+              {t("email")}
+              <span className="text-red-500 ml-1">*</span>
             </label>
           </div>
 
@@ -167,7 +169,8 @@ export default function ContactModal({ onClose }: ContactModalProps) {
               className="peer contactInput"
             />
             <label htmlFor="phone" className="contactLabel">
-              Phone<span className="text-red-500 ml-1">*</span>
+              {t("phone")}
+              <span className="text-red-500 ml-1">*</span>
             </label>
           </div>
 
@@ -184,17 +187,18 @@ export default function ContactModal({ onClose }: ContactModalProps) {
               className="peer contactInput resize-none h-24"
             />
             <label htmlFor="message" className="contactLabel">
-              Message<span className="text-red-500 ml-1">*</span>
+              {t("message")}
+              <span className="text-red-500 ml-1">*</span>
             </label>
           </div>
 
           {/* Buttons */}
           <div className="flex justify-end gap-3 mt-6">
             <Button variant="outline" type="button" onClick={onClose}>
-              Close
+              {t("close")}
             </Button>
             <Button variant="default" type="submit">
-              Send
+              {t("send")}
             </Button>
           </div>
         </form>

@@ -93,6 +93,13 @@
   },
   "contactModal": {
     "title": "Want to subscribe, buy or ask question?",
-    "description": "Fill out the form and we will respond within 3 business hours."
+    "description": "Fill out the form and we will respond within 3 business hours.",
+    "name": "Name",
+    "companyName": "Company Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "close": "Close",
+    "send": "Send"
   }
 }

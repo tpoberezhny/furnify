@@ -93,6 +93,13 @@
   },
   "contactModal": {
     "title": "Chcete pronajmout nábytek, koupit nebo se na něco zeptat?",
-    "description": "Vyplňte formulář a my vám odpovíme do 3 pracovních hodin"
+    "description": "Vyplňte formulář a my vám odpovíme do 3 pracovních hodin",
+    "name": "Jmeno",
+    "companyName": "Nazev firmy",
+    "email": "Email",
+    "phone": "Telefon",
+    "message": "Zprava",
+    "close": "Zavřit",
+    "send": "Odeslat"
   }
 }
