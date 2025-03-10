@@ -15,7 +15,7 @@ export default async function WeAreEco() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Card */}
-          <div className="relative w-full h-[400px] md:h-[500px] bg-transparent">
+          <div className="relative w-full h-[400px] md:h-[540px] bg-transparent">
             <Image
               src="/assets/eco.jpg"
               alt="eco"
@@ -26,9 +26,9 @@ export default async function WeAreEco() {
           </div>
 
           {/* Text Card */}
-          <div className="shadow-lg p-4 md:p-8 rounded-xl">
+          <div className="shadow-lg py-4 px-4 md:py-9 md:px-5 rounded-xl">
             <div className="flex flex-col justify-center">
-              <div className="text-gray-700 text-justify font-montserrat text-base md:text-xl dark:text-white leading-6">
+              <div className="text-gray-700 text-justify font-montserrat text-base md:text-xl dark:text-white">
                 <div>
                   {t("description1")}{" "}
                   <span className="text-orange-500">
