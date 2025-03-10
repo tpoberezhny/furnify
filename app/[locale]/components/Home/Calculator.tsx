@@ -23,7 +23,7 @@ export default function Calculator({ onClose }: CalculatorProps) {
     : numPeople * 4600;
 
   return (
-    <div className="fixed inset-0 md:inset-auto md:absolute z-50 flex items-center justify-center md:top-[calc(35%+10px)] md:right-6 bg-black/50 bg-opacity-50 md:bg-transparent">
+    <div className="fixed inset-0 md:inset-auto md:absolute z-10 flex items-center justify-center md:top-[calc(35%+10px)] md:right-6 bg-black/50 bg-opacity-50 md:bg-transparent">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg md:shadow-none max-w-md w-full p-6 relative">
         <button
           onClick={onClose}
@@ -32,7 +32,11 @@ export default function Calculator({ onClose }: CalculatorProps) {
           <X size={24} />
         </button>
         <h2 className="text-xl font-bold mb-4">{t("title")}</h2>
-        <h3 className="text-base font-semibold mb-4">{t("description")}</h3>
+        <h3 className="text-base font-semibold mb-4">
+          {t("description")}
+          <span className="text-orange-500">{t("description2")}</span>
+          {t("description3")}
+        </h3>
         <div className="mb-4">
           <label
             htmlFor="numPeople"
@@ -44,9 +48,16 @@ export default function Calculator({ onClose }: CalculatorProps) {
             id="numPeople"
             type="number"
             min="1"
-            max="200"
+            max="100"
             value={numPeople}
-            onChange={(e) => setNumPeople(parseInt(e.target.value))}
+            onChange={(e) => {
+              const value = parseInt(e.target.value);
+              if (value > 100) {
+                setNumPeople(100);
+              } else {
+                setNumPeople(value);
+              }
+            }}
             className="w-full border rounded px-3 py-2 text-center dark:invert"
           />
         </div>

@@ -28,9 +28,45 @@ export default async function WeAreEco() {
           {/* Text Card */}
           <div className="shadow-lg p-4 md:p-8 rounded-xl">
             <div className="flex flex-col justify-center">
-              <p className="text-gray-700 text-justify font-montserrat text-base md:text-xl dark:text-white">
-                {t("description")}
-              </p>
+              <div className="text-gray-700 text-justify font-montserrat text-base md:text-xl dark:text-white leading-6">
+                <div>
+                  {t("description1")}{" "}
+                  <span className="text-orange-500">
+                    {t("description1,1Org")}
+                  </span>{" "}
+                  {t("description1,2")}{" "}
+                  <span className="text-orange-500">
+                    {t("description1,3Org")}
+                  </span>{" "}
+                  {t("description1,4")}
+                </div>
+                <br />
+                <div>
+                  {t("description2")}{" "}
+                  <span className="text-orange-500">
+                    {t("description2,1Org")}
+                  </span>{" "}
+                  {t("description2,2")}{" "}
+                  <span className="text-orange-500">
+                    {t("description2,3Org")}
+                  </span>{" "}
+                  {t("description2,3")}
+                </div>
+                <br />
+                <div>
+                  {t("description3")}{" "}
+                  <span className="text-orange-500">
+                    {t("description3,1Org")}
+                  </span>{" "}
+                  {t("description3,2")}
+                </div>
+                <br />
+                {t("description4")}{" "}
+                <span className="text-orange-500">
+                  {t("description4,1Org")}
+                </span>{" "}
+                {t("description4,2")}
+              </div>
             </div>
           </div>
         </div>
