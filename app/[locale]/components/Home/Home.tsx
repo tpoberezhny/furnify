@@ -36,6 +36,19 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    if (window.innerWidth < 768 && !showCalculator) {
+      const handleTouch = () => {
+        setShowCalculator(true);
+      };
+      window.addEventListener("touchstart", handleTouch, { once: true });
+
+      return () => {
+        window.removeEventListener("touchstart", handleTouch);
+      };
+    }
+  }, []);
+
   const interactiveCircles = [
     {
       id: 1,
@@ -138,15 +151,15 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="mt-6 flex flex-row justify-center gap-1 md:gap-2 max-w-4xl items-center mx-auto py-3 dark:invert">
+      <div className="mt-6 flex flex-row justify-center gap-2 md:gap-6 max-w-4xl items-stretch text-center mx-auto py-3 dark:invert">
         <h2 className="benefits-description bg-orange-500 py-2 px-2 rounded-xl text-white">
           {t("benefit1")}
-        </h2>{" "}
-        |
-        <h2 className="benefits-description bg-orange-500  py-2 px-2 rounded-xl text-white">
+        </h2>
+
+        <h2 className="benefits-description bg-orange-500 py-2 px-2 rounded-xl text-white text-center items-center justify-center flex">
           {t("benefit2")}
-        </h2>{" "}
-        |
+        </h2>
+
         <h2 className="benefits-description bg-orange-500  py-2 px-2 rounded-xl text-white">
           {t("benefit3")}
         </h2>
