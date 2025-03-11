@@ -34,7 +34,9 @@ export default function Calculator({ onClose }: CalculatorProps) {
         <h2 className="text-xl font-bold mb-4">{t("title")}</h2>
         <h3 className="text-base font-semibold mb-4">
           {t("description")}
+          <br className="md:hidden" />
           <span className="text-orange-500">{t("description2")}</span>
+          <br className="md:hidden" />
           {t("description3")}
         </h3>
         <div className="mb-4">
@@ -52,8 +54,8 @@ export default function Calculator({ onClose }: CalculatorProps) {
             value={numPeople}
             onChange={(e) => {
               const value = parseInt(e.target.value);
-              if (value > 100) {
-                setNumPeople(100);
+              if (value > 1000) {
+                setNumPeople(1000);
               } else {
                 setNumPeople(value);
               }
