@@ -17,8 +17,8 @@ const furnitureSets: FurnitureSetProps[] = [
   {
     id: 1,
     image: "/assets/1set.png",
-    rentalCost: 700,
-    fullCost: 6500,
+    rentalCost: 950,
+    fullCost: 10500,
     name: "Basic",
     whatIncludes: [
       { quantity: 1, key: "includes.table" },
@@ -28,8 +28,8 @@ const furnitureSets: FurnitureSetProps[] = [
   {
     id: 2,
     image: "/assets/2set.png",
-    rentalCost: 1500,
-    fullCost: 13500,
+    rentalCost: 1615,
+    fullCost: 17750,
     name: "Ergo",
     whatIncludes: [
       { quantity: 1, key: "includes.table" },
@@ -40,8 +40,8 @@ const furnitureSets: FurnitureSetProps[] = [
   {
     id: 3,
     image: "/assets/3set.png",
-    rentalCost: 2000,
-    fullCost: 15000,
+    rentalCost: 1409,
+    fullCost: 15500,
     name: "CEO",
     whatIncludes: [
       { quantity: 1, key: "includes.table" },

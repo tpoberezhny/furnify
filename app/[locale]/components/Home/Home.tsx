@@ -123,7 +123,7 @@ export default function Home() {
             >
               {/* The hotspot circle */}
               <div
-                className="w-[50px] h-[50px] rounded-full cursor-pointer flex items-center justify-center z-10"
+                className="w-[50px] h-[50px] rounded-full cursor-pointer flex items-center justify-center z-2"
                 onMouseEnter={
                   isHoveredEnabled ? () => setActiveHover(circle.id) : undefined
                 }
@@ -138,7 +138,7 @@ export default function Home() {
 
               {/* Tooltip/modal that appears under the circle */}
               {activeHover === circle.id && (
-                <div className="absolute md:top-full top-1/3 left-1/2 transform -translate-x-1/2 mt-2 md:py-1 bg-gray-50 rounded z-[51]">
+                <div className="absolute md:top-full top-1/3 left-1/2 transform -translate-x-1/2 mt-2 md:py-1 bg-gray-50 rounded z-2">
                   <p className="mainImageTitle text-center md:p-1 md:mb-0 w-full dark:invert">
                     {circle.title}
                   </p>

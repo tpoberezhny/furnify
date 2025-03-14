@@ -54,9 +54,9 @@
     "fullPrice": "Kč",
     "buy": "Koupit:",
     "includes": {
-      "chair": "Židle",
-      "table": "Stůl",
-      "cabinet": "Skříňka"
+      "chair": "Chair",
+      "table": "CEO Desk",
+      "cabinet": "Cabinet"
     },
     "whatIncludes": "Zahrnuje: "
   },
