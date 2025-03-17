@@ -21,8 +21,8 @@ const furnitureSets: FurnitureSetProps[] = [
     fullCost: 10500,
     name: "Basic",
     whatIncludes: [
-      { quantity: 1, key: "includes.table" },
-      { quantity: 1, key: "includes.chair" },
+      { quantity: 1, key: "includes.basicChair" },
+      { quantity: 1, key: "includes.flexiDesk" },
     ],
   },
   {
@@ -32,8 +32,8 @@ const furnitureSets: FurnitureSetProps[] = [
     fullCost: 17750,
     name: "Ergo",
     whatIncludes: [
-      { quantity: 1, key: "includes.table" },
-      { quantity: 1, key: "includes.chair" },
+      { quantity: 1, key: "includes.ergoChair" },
+      { quantity: 1, key: "includes.flexiDesk" },
       { quantity: 1, key: "includes.cabinet" },
     ],
   },
@@ -44,8 +44,8 @@ const furnitureSets: FurnitureSetProps[] = [
     fullCost: 15500,
     name: "CEO",
     whatIncludes: [
-      { quantity: 1, key: "includes.table" },
-      { quantity: 1, key: "includes.chair" },
+      { quantity: 1, key: "includes.ceoChair" },
+      { quantity: 1, key: "includes.ceoTable" },
     ],
   },
 ];

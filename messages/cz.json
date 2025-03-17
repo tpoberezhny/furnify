@@ -9,7 +9,7 @@
   },
   "home": {
     "title": "Zařiďte svou kancelář",
-    "typeWriterTitle": "pomocí modelu předplatného",
+    "typeWriterTitle": "pomocí předplatného",
     "description1": "Poskytněte svému pracovišti stylový, ergonomický nábytek na flexibilní předplatné",
     "description2": "žádné počáteční náklady, snadné upgrady a bezproblémová údržba.",
     "benefit1": "Žádné počáteční náklady",
@@ -44,19 +44,23 @@
     "1step": "Pošlete svůj požadavek:",
     "1stepDescription": "Kontaktujte nás vyplněním vašich osobních/firemních údajů a pole zprávy ve formuláři pro požadavek nábytku.",
     "2step": "Poradenství a plánování:",
-    "2stepDescription": "Ozveme se vám a projednáme detaily a pochopíme vaši požadavky.",
+    "2stepDescription": "Ozveme se vám a projednáme detaily a pochopíme vaše požadavky.",
     "3step": "Předplatné:",
     "3stepDescription": "Dostanete od nás nabídku na předplatné. Nyní máte nábytek, za který platíte jenom malou částku měsíčně."
   },
   "furnitureSets": {
-    "rent": "Pronajem:",
+    "rent": "Pronajmount:",
     "rentPrice": "Kč/měsíc",
     "fullPrice": "Kč",
     "buy": "Koupit:",
     "includes": {
       "chair": "Chair",
-      "table": "CEO Desk",
-      "cabinet": "Cabinet"
+      "basicChair": "Basic Chair",
+      "ergoChair": "Ergo Chair",
+      "ceoChair": "CEO Chair",
+      "flexiDesk": "Flexi Desk",
+      "ceoTable": "CEO Desk",
+      "cabinet": "X Container"
     },
     "whatIncludes": "Zahrnuje: "
   },
@@ -67,7 +71,7 @@
   },
   "eco": {
     "title1": "Ekologická",
-    "title2": "Odpovědnost",
+    "title2": "zodpovědnost",
     "description1": "Náš projekt nejen",
     "description1,1Org": "pomáhá",
     "description1,2": "firmám získávat nábytek, ale také",
@@ -111,12 +115,12 @@
   "contactModal": {
     "title": "Chcete pronajmout nábytek, koupit nebo se na něco zeptat?",
     "description": "Vyplňte formulář a my vám odpovíme do 3 pracovních hodin",
-    "name": "Jmeno",
-    "companyName": "Nazev firmy",
+    "name": "Jméno",
+    "companyName": "Název firmy",
     "email": "Email",
     "phone": "Telefon",
-    "message": "Zprava",
-    "close": "Zavřit",
+    "message": "Zpráva",
+    "close": "Zavřít",
     "send": "Odeslat"
   }
 }

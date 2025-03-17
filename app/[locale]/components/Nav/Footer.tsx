@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="mt-10">
       <div className="flex flex-col items-center">
-        <Link href="/">
+        <Link href={`/${currentLocale}/`}>
           <Image
             src={logoSrc}
             alt="Logo"
@@ -35,15 +35,15 @@ const Footer = () => {
           />
         </Link>
       </div>
+      <div className="flex justify-center mb-3">
+        <a className="text-base" href="mailto:ceo@furnify.cz">
+          ceo@furnify.cz
+        </a>
+      </div>
       <div className="flex justify-center gap-4 md:gap-6 opacity-50 text-base">
         <Link href={`/${currentLocale}/`}>{t("home")}</Link>
         <Link href={`/${currentLocale}/terms`}>{t("terms")}</Link>
         <Link href={`/${currentLocale}/privacy`}>{t("privacy")}</Link>
-      </div>
-      <div className="flex justify-center mt-3">
-        <a className="text-base" href="mailto:ceo@furnify.cz">
-          ceo@furnify.cz
-        </a>
       </div>
       <p className="text-center text-base mt-3 mb-10 text-gray-500">
         © 2025 Furnify. {t("reserved")}

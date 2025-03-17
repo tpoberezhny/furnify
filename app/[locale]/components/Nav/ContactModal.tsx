@@ -30,12 +30,16 @@ export default function ContactModal({ onClose }: ContactModalProps) {
   }, []);
 
   useEffect(() => {
-    const originalStyle = window.getComputedStyle(document.body).overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = originalStyle;
-    };
-  }, []);
+    if (mounted) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+      console.log(`The mounted value is ${mounted}`);
+
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [mounted]);
 
   if (!mounted) return null;
 

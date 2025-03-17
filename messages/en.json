@@ -9,7 +9,7 @@
   },
   "home": {
     "title": "Furnish your office",
-    "typeWriterTitle": "with subscription model",
+    "typeWriterTitle": "with subscription",
     "description1": "Provide your spaces with stylish, ergonomic furniture on a flexible subscription model",
     "description2": "no upfront costs, easy upgrades, and hassle-free maintenance.",
     "benefit1": "No Upfront costs",
@@ -55,8 +55,12 @@
     "buy": "Buy:",
     "includes": {
       "chair": "Chair",
-      "table": "CEO Desk",
-      "cabinet": "Cabinet"
+      "basicChair": "Basic Chair",
+      "ergoChair": "Ergo Chair",
+      "ceoChair": "CEO Chair",
+      "flexiDesk": "Flexi Desk",
+      "ceoTable": "CEO Desk",
+      "cabinet": "X Container"
     },
     "whatIncludes": "Contain: "
   },

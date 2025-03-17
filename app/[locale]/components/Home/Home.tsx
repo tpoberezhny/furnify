@@ -49,34 +49,46 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    if (showCalculator && window.innerWidth < 768) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+      console.log(`The mounted value is ${showCalculator}`);
+
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [showCalculator]);
+
   const interactiveCircles = [
     {
       id: 1,
       top: "28%",
       left: "7.2%",
       title: "The Board",
-      priceRent: "590",
+      priceRent: "705",
     },
     {
       id: 2,
       top: "51.5%",
       left: "16.5%",
-      title: "Flexi Table",
-      priceRent: "535",
+      title: "Flexi Desk",
+      priceRent: "665",
     },
     {
       id: 3,
       top: "59%",
       left: "32.2%",
       title: "Ergo Chair",
-      priceRent: "690",
+      priceRent: "635",
     },
     {
       id: 4,
       top: "59.5%",
       left: "48.7%",
       title: "X Container",
-      priceRent: "255",
+      priceRent: "315",
     },
   ];
 
@@ -152,7 +164,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-6 flex flex-row justify-center gap-2 md:gap-6 max-w-4xl items-stretch text-center mx-auto py-3 dark:invert">
-        <h2 className="benefits-description bg-orange-500 py-2 px-2 rounded-xl text-white">
+        <h2 className="benefits-description bg-orange-500 py-2 px-2 rounded-xl text-white text-center items-center justify-center flex">
           {t("benefit1")}
         </h2>
 
@@ -160,7 +172,7 @@ export default function Home() {
           {t("benefit2")}
         </h2>
 
-        <h2 className="benefits-description bg-orange-500  py-2 px-2 rounded-xl text-white">
+        <h2 className="benefits-description bg-orange-500  py-2 px-2 rounded-xl text-white text-center items-center justify-center flex">
           {t("benefit3")}
         </h2>
       </div>
