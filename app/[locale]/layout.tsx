@@ -24,6 +24,18 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Furnify",
   description: "Rent your furnitures with Furnify",
+  metadataBase: new URL('https://furnify.cz'),
+  openGraph: {
+    title: "Furnify",
+    description: "Rent your furnitures with Furnify",
+    url: "https://furnify.cz",
+    siteName: "Furnify",
+    locale: "cs_CZ",
+    type: 'website',
+  },
+  alternates: {
+    canonical: "https://furnify.cz",
+  }
 };
 
 export default async function RootLayout(props: {
